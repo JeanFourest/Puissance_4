@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+.navigation {
+    padding: 20px 0 0 0;
+}
+
+h1 {
+    padding: 150px 620px 150px 620px;
+}
+
+.answer {
+    padding: 15px 0 15px 0;
+}
+
+input[type=text], input[type=email], input[type=password], input[type=submit] {
+    padding: 15px 15px 15px 15px;
+}
+
+#submit {
+    margin: 0 605px 0 0;
+}
+
+.informations {
+    margin: 150px 0 150px 0;
+}
+
+footer {
+    margin: 0 0 0 200px;
+}
