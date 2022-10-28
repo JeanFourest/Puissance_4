@@ -1,0 +1,29 @@
+body {
+    background-color: #10002B;
+    color: #FFFFFF;
+}
+
+.head {
+    background-color: #240046;
+}
+
+a {
+    color: #FFFFFF;
+}
+
+input[type=text], input[type=email], input[type=password] {
+    background-color: #5a2f70;
+    border: none;
+    border-radius: 2px;
+}
+
+input[type=submit] {
+    background-color: #FFA500;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 2px;
+}
+
+article p, footer, aside a {
+    color: rgba(255, 255, 255, 0.75);
+}
