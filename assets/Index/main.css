@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     background-color: rgb(23,0,47);
     margin: 0%;
     color:  white;
@@ -13,12 +13,15 @@ body{
 }
 
 .accroche-titre{
+    color : lightgray;
     text-align: center;
     margin-top: -1.8%;
+    font-weight: lighter;
 }
 
 .Jouer{
-    margin-top: 3%;
+    margin-top: 1%;
+    margin-bottom: 13%;
     background-color: orange;
     color: white;
     width: 10%;
@@ -63,7 +66,7 @@ a:active {
 }
 
 .background{
-    background-image: url("/Projet-Puissance_4/assets/Index/fond-projet.webp");
+    background-image: url("/Projet-Puissance_4/assets/Index/background.png");
     background-repeat: no-repeat;
-    
+
 }
