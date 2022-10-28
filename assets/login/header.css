@@ -1,0 +1,57 @@
+header
+{
+    display: flex;
+    justify-content: space-around;
+    background-color: lightgray;
+    min-height: 90px;
+}
+.mesPages
+{
+    margin-left: 20%;
+    width: 25%;
+    background-color: lightblue;
+}
+.mesPages2
+{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+
+}
+
+.title
+{
+    padding-top: 1.4%;
+}
+
+
+
+
+
+/* unvisited link */
+a:link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: white;
+    text-decoration: none;
+
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: white;
+    text-decoration: none;
+
+  }
+  
+  /* selected link */
+  a:active {
+    color: white;
+    text-decoration: none;
+
+  }
