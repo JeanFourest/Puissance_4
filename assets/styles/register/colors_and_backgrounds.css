@@ -7,6 +7,10 @@ body {
     background-color: #240046;
 }
 
+h1 {
+    background-image: url(../../images/api_thumb_450.jpg);
+}
+
 a {
     text-decoration: none;
     color: #FFFFFF;
