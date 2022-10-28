@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap%27');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(23,0,47);
+    margin: 0%;
+    color:  white;
+}
+
+.titre-accueil{
+    text-align: center;
+    font-size: 300%;
+}
+
+.accroche-titre{
+    text-align: center;
+    margin-top: -1.8%;
+}
+
+.Jouer{
+    margin-top: 3%;
+    background-color: orange;
+    color: white;
+    width: 10%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    display: flex;
+    justify-content: center;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.Block-Jouer{
+    display: flex;
+    justify-content: center;
+}
+
+/*unvisited link */
+a:link {
+    color: white;
+    text-decoration: none;
+  }
+
+/* visited link */
+a:visited {
+    color: white;
+    text-decoration: none;
+
+}
+
+/* mouse over link */
+a:hover {
+    color: rgb(84, 189, 224);
+    text-decoration: none;
+
+}
+
+/* selected link */
+a:active {
+    color: white;
+    text-decoration: none;
+
+}
+
+.background{
+    background-image: url("/Projet-Puissance_4/assets/Index/fond-projet.webp");
+    background-repeat: no-repeat;
+    
+}
