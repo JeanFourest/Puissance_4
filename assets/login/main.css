@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body
+{
+    font-family: 'Lato', sans-serif;
+    color: white;
+    background-color: rgb(23, 0, 47);
+    margin: 0px;
+}
+
+.texteConnexion
+{
+    background-color: Blue;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/login/background.png");
+}
+
+.connexion
+{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.connexion2
+{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+::placeholder
+{
+    background-color: rgb(58, 31, 86);
+}
+#email
+{
+    background-color: rgb(58, 31, 86);
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
+    width: 500px;
+    height: 30px;
+    color: white;
+}
+#mdp
+{
+    background-color: rgb(58, 31, 86);
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
+    width: 500px;
+    height: 30px;
+    color: white;
+
+}
+#bouttonConnexion
+{
+    border: none;
+    background-color: orange;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-radius: 2px;
+}
