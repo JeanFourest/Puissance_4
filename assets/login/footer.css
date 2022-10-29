@@ -19,7 +19,9 @@
 .logos:link {
     color: orange;
     text-decoration: none;
-    margin: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
 }
   
 /* visited link */
