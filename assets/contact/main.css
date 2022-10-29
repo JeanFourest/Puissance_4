@@ -18,3 +18,30 @@ body
     align-items: center;
     background-image: url("/assets/login/background.png");
 }
+
+.contacter
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    background-color: rgb(144, 238, 222);
+}
+
+.boite
+{
+    display: flex;
+    justify-content: space-between;
+    width: 950px;
+    background-color: rgb(2, 228, 2);
+
+}
+
+.boite2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    width: 300px;
+    height: 200px;
+}
