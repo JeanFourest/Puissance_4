@@ -17,6 +17,8 @@ body
     justify-content: center;
     align-items: center;
     background-image: url("/assets/login/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .contacter
