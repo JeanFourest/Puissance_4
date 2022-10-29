@@ -7,7 +7,7 @@ body {
 }
 
 h1 {
-    padding: 150px 620px 150px 620px;
+    padding: 120px 620px 120px 620px;
 }
 
 .answer {
@@ -18,6 +18,10 @@ input[type=text], input[type=email], input[type=password], input[type=submit] {
     padding: 15px 15px 15px 15px;
 }
 
+section {
+    padding: 100px 0 100px 0;
+}
+
 #submit {
     margin: 0 605px 0 0;
 }
@@ -26,6 +30,15 @@ input[type=text], input[type=email], input[type=password], input[type=submit] {
     margin: 150px 0 150px 0;
 }
 
+.social a {
+    padding: 0 15px 0 15px;
+    font-size: 20px;
+}
+
 footer {
     margin: 0 0 0 200px;
+}
+
+ul li {
+    padding: 10px 0 10px 0;
 }
