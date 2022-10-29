@@ -59,7 +59,7 @@ body
 {
     background-color: lightcoral;
     width: 600px;
-    height: 260px;
+    height: 280px;
     margin-right: 350px;
 }
 
@@ -81,7 +81,6 @@ body
     background-color: rgb(58, 31, 86);
     border: none;
     margin: 10px;
-
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 2px;
@@ -95,7 +94,6 @@ body
     background-color: rgb(58, 31, 86);
     border: none;
     margin: 10px;
-
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 2px;
@@ -109,7 +107,6 @@ body
     background-color: rgb(58, 31, 86);
     border: none;
     margin: 10px;
-
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 2px;
@@ -120,5 +117,11 @@ body
 
 #bouttonformulaire
 {
-    
+    border: none;
+    background-color: orange;
+    color: white;
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 2px;
 }
