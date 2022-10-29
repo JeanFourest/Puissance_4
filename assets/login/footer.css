@@ -8,6 +8,11 @@
     justify-content: space-around;
 }
 
+li
+{
+    margin-top: 20px;
+}
+
 .footerOrange
 {
     color: orange;
