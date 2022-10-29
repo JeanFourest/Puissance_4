@@ -11,6 +11,7 @@ header{
 }
 
 .links2{
+    margin-top: 3%;
 }
 
 #lien{
@@ -20,4 +21,5 @@ header{
 .title{
     margin-right: 10%;
     font-size: large;
+    margin-top: 2%;
 }
