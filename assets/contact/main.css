@@ -41,9 +41,15 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: green;
+    flex-direction: column;
+    background-color: rgb(18, 0, 37);
     width: 300px;
     height: 200px;
+}
+
+.paraBoite
+{
+    margin-top: 40px;
 }
 
 .formulaire
