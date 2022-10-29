@@ -45,3 +45,11 @@ body
     width: 300px;
     height: 200px;
 }
+
+.formulaire
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    background-color: lightcyan;
+}
