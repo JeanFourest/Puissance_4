@@ -76,7 +76,7 @@ a:active {
 
 }
 
-.background{
+.background-naviguation{
     background-image: url("/Projet-Puissance_4/assets/Images/background.png");
     background-repeat: no-repeat;
 
@@ -87,4 +87,94 @@ a:active {
     justify-content: center;
     align-self: center;
     margin: 10%;
+}
+
+/* parties infomartions et contacts */
+.informations {
+    display: flex;
+    justify-content: space-around;
+}
+
+strong {
+    color: #FFA500;
+}
+
+
+.background-Infos{
+    background-color: rgb(14, 0, 29) ;
+}
+
+.block-image-donnees{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+
+.background-donnees{
+    background-color: rgb(24, 2, 50);
+}
+
+.all-donnees{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 3%;
+    padding-right: 10%;
+}
+
+.donnees-parties{
+    display: flex;
+    flex-direction: row;
+}
+
+.donnees-joueurs{
+    display: flex;
+    flex-direction: row;
+}
+
+.text1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 20%;
+    background-color: blue;
+    font-size: 90%;
+    border-radius: 2px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.text2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-color: green;
+    font-size: 90%;
+    border-radius: 2px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    text-align: center;
+}
+
+.text3{
+    background-color: red;
+    font-size: 90%;
+    border-radius: 2px;
+    padding-left: 10%;
+    padding-right: 8%;
+    text-align: center;
+    margin-right: 10%;
+}
+
+.text4{
+    background-color: yellow;
+    font-size: 90%;
+    border-radius: 2px;
+    padding-left: 10%;
+    padding-right: 8%;
+    text-align: center;
 }
