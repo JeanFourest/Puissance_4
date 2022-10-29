@@ -16,7 +16,7 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/assets/login/background.png");
+    background-image: url("/assets/images/background.png");
 }
 
 .connexion

@@ -7,12 +7,12 @@ footer
     justify-content: space-around;
 }
 
-.footerStrong
+.footerOrange
 {
     color: orange;
 }
 
 .gris
 {
-    opacity: 0.50;
+    color: rgb(174, 174, 174);
 }
