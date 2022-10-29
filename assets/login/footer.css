@@ -8,6 +8,43 @@
     justify-content: space-around;
 }
 
+.imageLiens
+{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+
+.logos:link {
+    color: orange;
+    text-decoration: none;
+    margin: 5px;
+}
+  
+/* visited link */
+.logos:visited {
+    color: orange;
+    text-decoration: none;
+
+}
+  
+/* mouse over link */
+.logos:hover {
+    color: rgb(148, 96, 0);
+    text-decoration: none;
+
+}
+  
+/* selected link */
+.logos:active {
+    color: orange;
+    text-decoration: none;
+
+}
+
+
+
 li
 {
     margin-top: 20px;
