@@ -51,5 +51,74 @@ body
     display: flex;
     justify-content: center;
     margin-top: 40px;
+    margin-bottom: 40px;
     background-color: lightcyan;
+}
+
+.fomulaire2
+{
+    background-color: lightcoral;
+    width: 600px;
+    height: 260px;
+    margin-right: 350px;
+}
+
+#nom
+{
+    background-color: rgb(58, 31, 86);
+    border: none;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
+    width: 200px;
+    height: 30px;
+    color: white;
+}
+
+#email
+{
+    background-color: rgb(58, 31, 86);
+    border: none;
+    margin: 10px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
+    width: 200px;
+    height: 30px;
+    color: white;
+}
+
+#sujet
+{
+    background-color: rgb(58, 31, 86);
+    border: none;
+    margin: 10px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
+    width: 443px;
+    height: 30px;
+    color: white;
+}
+
+#message
+{
+    background-color: rgb(58, 31, 86);
+    border: none;
+    margin: 10px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
+    width: 443px;
+    height: 100px;
+    color: white;
+}
+
+#bouttonformulaire
+{
+    
 }
