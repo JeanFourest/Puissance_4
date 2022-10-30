@@ -1,11 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+
+
+/* Styles global du texte de la page */
+
 body{
     font-family: 'Lato', sans-serif;
     background-color: rgb(23,0,47);
     margin: 0%;
     color:  white;
 }
+
+
+
+/* Arrière plan du header jusqu'au bouton Jouer */
+
+.background-naviguation{
+    background-image: url("/Projet-Puissance_4/assets/Images/background.png");
+    background-repeat: no-repeat;
+}
+
+
+
+/* Styles de la partie accueil Bienvenue ainsi que le bouton Jouer */
 
 .titre-accueil{
     text-align: center;
@@ -18,6 +35,11 @@ body{
     text-align: center;
     margin-top: -1.8%;
     font-weight: lighter;
+}
+
+.Block-Jouer{
+    display: flex;
+    justify-content: center;
 }
 
 .Jouer{
@@ -38,9 +60,25 @@ body{
     background-color: darkorange;
 }
 
-.Block-Jouer{
+
+
+/* Style de la partie explication du jeu */
+
+.block-Texts-Images{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.block-Images{
+    display: flex;
+    flex-direction: row;
+    margin-right: 10%;
+    margin-top: 3%;
+}
+
+#Images{
+    padding-right: 5%;
 }
 
 .block-Texts{
@@ -49,59 +87,12 @@ body{
     justify-content: space-around;
 }
 
-/*unvisited link */
-a:link {
-    color: white;
-    text-decoration: none;
-  }
-
-/* visited link */
-a:visited {
-    color: white;
-    text-decoration: none;
-
-}
-
-/* mouse over link */
-a:hover {
-    color: orange;
-    text-decoration: none;
-
-}
-
-/* selected link */
-a:active {
-    color: white;
-    text-decoration: none;
-
-}
-
-.background-naviguation{
-    background-image: url("/Projet-Puissance_4/assets/Images/background.png");
-    background-repeat: no-repeat;
-
-}
-
-.block-Texts-Images{
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    margin: 10%;
-}
-
-/* parties infomartions et contacts */
-.informations {
-    display: flex;
-    justify-content: space-around;
-}
-
-strong {
-    color: #FFA500;
-}
 
 
-.background-Infos{
-    background-color: rgb(14, 0, 29) ;
+/* Styles de la partie données et joueurs */
+
+.background-donnees{
+    background-color: rgb(24, 2, 50);
 }
 
 .block-image-donnees{
@@ -109,10 +100,6 @@ strong {
     justify-content: center;
     flex-direction: row;
     
-}
-
-.background-donnees{
-    background-color: rgb(24, 2, 50);
 }
 
 .all-donnees{
@@ -127,11 +114,6 @@ strong {
     display: flex;
     flex-direction: row;
     padding-bottom: -10%;
-}
-
-.donnees-joueurs{
-    display: flex;
-    flex-direction: row;
 }
 
 .text1{
@@ -158,6 +140,11 @@ strong {
     padding-right: 20%;
 }
 
+.donnees-joueurs{
+    display: flex;
+    flex-direction: row;
+}
+
 .text3{
     font-size: 90%;
     background-color: red;
@@ -176,4 +163,21 @@ strong {
     text-align: center;
     padding-left: 20%;
     padding-right: 20%;
+}
+
+
+
+/* parties infomartions et contacts */
+
+.background-Infos{
+    background-color: rgb(14, 0, 29) ;
+}
+
+.informations {
+    display: flex;
+    justify-content: space-around;
+}
+
+strong {
+    color: #FFA500;
 }

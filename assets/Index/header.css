@@ -1,7 +1,15 @@
+/* Style de la barre de naviguation */
+
 header{
     display: flex;
     justify-content: space-around;
     color: white;
+}
+
+.title{
+    margin-right: 10%;
+    font-size: large;
+    margin-top: 2%;
 }
 
 .links{
@@ -18,8 +26,29 @@ header{
     padding-left: 10px;
 }
 
-.title{
-    margin-right: 10%;
-    font-size: large;
-    margin-top: 2%;
+/*unvisited link */
+a:link {
+    color: white;
+    text-decoration: none;
+  }
+
+/* visited link */
+a:visited {
+    color: white;
+    text-decoration: none;
+
+}
+
+/* mouse over link */
+a:hover {
+    color: aqua;
+    text-decoration: none;
+
+}
+
+/* selected link */
+a:active {
+    color: white;
+    text-decoration: none;
+
 }
