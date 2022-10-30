@@ -21,3 +21,24 @@ body
     background-color: rgb(18, 0, 37);
 }
 
+.tableau1
+{
+    background-color: lightgreen;
+    width: fit-content;
+    height: fit-content;
+    border-spacing: 10px;
+}
+
+.td1
+{
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+}
+
+.box
+{
+    display: flex;
+    justify-content: center;
+}
