@@ -1,0 +1,15 @@
+.header_and_main {
+    background-color: #240046;
+}
+
+.navigation {
+    padding: 20px 0 0 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.links_nav {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
