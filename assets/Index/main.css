@@ -83,8 +83,7 @@ body{
 
 .block-Texts{
     display:flex;
-    align-self:flex-end;
-    justify-content: space-around;
+    align-self: center;
 }
 
 
