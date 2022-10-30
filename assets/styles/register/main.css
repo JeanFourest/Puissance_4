@@ -1,6 +1,8 @@
 #title {
     background-image: url(../../images/api_thumb_450.jpg);
-    padding: 120px 620px 120px 620px;
+    padding: 120px 0 120px 0;
+    width: 100%;
+    text-align: center;
 }
 
 .inscription {
@@ -16,6 +18,7 @@
 
 .required_answer {
     background-color: #5a2f70;
+    color: #FFFFFF;
     border: none;
     border-radius: 2px;
     padding: 15px 15px 15px 15px;
