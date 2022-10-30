@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+
+
+/* Styles global du texte de la page */
+
 body{
     font-family: 'Lato', sans-serif;
     background-color: rgb(23,0,47);
@@ -7,9 +11,23 @@ body{
     color:  white;
 }
 
+
+
+/* Arrière plan du header jusqu'au bouton Jouer */
+
+.background-naviguation{
+    background-image: url("/Projet-Puissance_4/assets/Images/background.png");
+    background-repeat: no-repeat;
+}
+
+
+
+/* Styles de la partie accueil Bienvenue ainsi que le bouton Jouer */
+
 .titre-accueil{
     text-align: center;
-    font-size: 300%;
+    font-size: 400%;
+    margin-top: 10%;
 }
 
 .accroche-titre{
@@ -17,6 +35,11 @@ body{
     text-align: center;
     margin-top: -1.8%;
     font-weight: lighter;
+}
+
+.Block-Jouer{
+    display: flex;
+    justify-content: center;
 }
 
 .Jouer{
@@ -33,40 +56,127 @@ body{
     text-decoration: none;
 }
 
-.Block-Jouer{
+.Jouer:hover{
+    background-color: darkorange;
+}
+
+
+
+/* Style de la partie explication du jeu */
+
+.block-Texts-Images{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.block-Images{
+    display: flex;
+    flex-direction: row;
+    margin-right: 10%;
+    margin-top: 3%;
+}
+
+#Images{
+    padding-right: 5%;
+}
+
+.block-Texts{
+    display:flex;
+    align-self: center;
+}
+
+
+
+/* Styles de la partie données et joueurs */
+
+.background-donnees{
+    background-color: rgb(24, 2, 50);
+}
+
+.block-image-donnees{
     display: flex;
     justify-content: center;
+    flex-direction: row;
+    
 }
 
-/*unvisited link */
-a:link {
-    color: white;
-    text-decoration: none;
-  }
-
-/* visited link */
-a:visited {
-    color: white;
-    text-decoration: none;
-
+.all-donnees{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 3%;
+    padding-right: 10%;
 }
 
-/* mouse over link */
-a:hover {
-    color: rgb(84, 189, 224);
-    text-decoration: none;
-
+.donnees-parties{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: -10%;
 }
 
-/* selected link */
-a:active {
-    color: white;
-    text-decoration: none;
-
+.text1{
+    font-size: 90%;
+    background-color: blue;
+    border-radius: 2px;
+    margin-top: -12%;
+    margin-bottom: 12%;
+    margin-right: 10%;
+    text-align: center;
+    padding-left: 23%;
+    padding-right: 23%;
+    padding-top: 20%;
 }
 
-.background{
-    background-image: url("/Projet-Puissance_4/assets/Images/background.png");
-    background-repeat: no-repeat;
+.text2{
+    font-size: 90%;
+    background-color: rgb(0, 255, 0);
+    border-radius: 2px;
+    text-align: center;
+    margin-top: -12%;
+    margin-bottom: 12%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
 
+.donnees-joueurs{
+    display: flex;
+    flex-direction: row;
+}
+
+.text3{
+    font-size: 90%;
+    background-color: red;
+    border-radius: 2px;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 16%;
+    margin-right: 10%;
+    padding-bottom: 20%;
+}
+
+.text4{
+    font-size: 90%;
+    background-color: black;
+    border-radius: 2px;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+
+
+/* parties infomartions et contacts */
+
+.background-Infos{
+    background-color: rgb(14, 0, 29) ;
+}
+
+.informations {
+    display: flex;
+    justify-content: space-around;
+}
+
+strong {
+    color: #FFA500;
 }

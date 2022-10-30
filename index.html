@@ -1,120 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page d'accueil</title>
-    <link rel="stylesheet" href="assets/Index/header.css">
-    <link rel="stylesheet" href="assets/Index/main.css">
-    <link rel="stylesheet" href="assets/Index/footer.css">
-</head>
-<body>
-    
-    <!--Barre de naviguation de la page-->
-    <div class="background">
-        <header> 
-            <p class="title">Memory Game</p> 
-            <div class="links">
-                <div class="links2"> 
-                    <a href="Accueil" id="lien">ACCUEIL</a>
-                    <a href="Jeu" id="lien">JEU</a>
-                    <a href="Scores" id="lien">SCORES</a>
-                    <a href="Contact" id="lien">NOUS CONTACTER</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Page d'accueil</title>
+        <link rel="stylesheet" href="assets/Index/header.css">
+        <link rel="stylesheet" href="assets/Index/main.css">
+        <link rel="stylesheet" href="assets/Index/footer.css">
+    </head>
+    <body>
+        <div class="background-naviguation">
+            <!--Barre de naviguation de la page-->
+            <header> 
+                <p class="title">Memory Game</p> 
+                <div class="links">
+                    <div class="links2"> 
+                        <a href="Accueil" id="lien">ACCUEIL</a>
+                        <a href="Jeu" id="lien">JEU</a>
+                        <a href="Scores" id="lien">SCORES</a>
+                        <a href="Contact" id="lien">NOUS CONTACTER</a>
+                    </div>
+                </div>
+            </header>
+
+            <!--Ici c'est le Bienvenue-->
+            <div> 
+                <h1 class="titre-accueil">BIENVENUE DANS <br> NOTRE INCROYABLE JEU!</h1>
+
+                <p class="accroche-titre">Venez tester votre mémoire sur ce jeu</p>
+
+                <div class="Block-Jouer">
+                    <a href="Jouer" class="Jouer"> <div>JOUER !</div> </a>
                 </div>
             </div>
-        </header>
-
-        <!--Ici c'est le Bienvenue-->
-        <div class="main"> 
-            <h1 class="titre-accueil">BIENVENUE DANS <br> NOTRE JEU INCROYABLE!</h1>
-
-            <p class="accroche-titre">Venez tester votre mémoire sur ce jeu</p>
-
-            <div class="Block-Jouer">
-                <a href="Jouer" class="Jouer"> <div>JOUER !</div> </a>
-            </div>
         </div>
-    </div>
 
         <!--Texte Explication Jeu-->
-        <div>
-            <div>
-                <a href=""></a>
-                <p> <strong>01</strong> Lorem ipsum</p>
-                <p>dolor sit amet consectetur adipisicing elit. Rem est iure ea magni maiores consequuntur <br> perferendis doloribus sint repellendus molestias provident, ut totam quis nesciunt, vero, <br> officiis dolore reprehenderit perspiciatis.</p>
+        <div class="block-Texts-Images"> <!---Block principal qui contient tous les blocks images et textes-->
+            <div class="block-Images"> <!--Sous block du block principal contient les images-->
+                <img src="/Projet-Puissance_4/assets/Images/images1.png" alt="Image de petits écrans" id="Images">
+                <img src="/Projet-Puissance_4/assets/Images/images2.jpeg" alt="Petit bonhomme s'amusant" id="Images">
+                <img src="/Projet-Puissance_4/assets/Images/images3.jpeg" alt="Image poker" id="Images">
             </div>
-            <div>
-                <a href=""></a>
-                <p><strong>02</strong> Lorem ipsum</p>
-                <p>dolor sit amet consectetur adipisicing elit. Rem est iure ea magni maiores consequuntur <br> perferendis doloribus sint repellendus molestias provident, ut totam quis nesciunt, vero, <br> officiis dolore reprehenderit perspiciatis.</p>
-            </div>
-            <div>
-                <a href=""></a>
-                <p><strong>03</strong> Lorem ipsum</p>
-                <p>dolor sit amet consectetur adipisicing elit. Rem est iure ea magni maiores consequuntur <br> perferendis doloribus sint repellendus molestias provident, ut totam quis nesciunt, vero, <br> officiis dolore reprehenderit perspiciatis.</p>
+            <div class="block-Texts"> <!--Sous block du block principal contient les textes d'explication-->
+                <div class="Textes1">
+                    <p>01 Lorem ipsum</p>
+                    <p>dolor sit amet consectetur <br> adipisicing elit. Rem est iure ea <br> magni maiores consequuntur <br> perferendis doloribus sint <br> repellendus molestias provident, <br> ut totam quis nesciunt, vero, <br> officiis dolore reprehenderit <br> perspiciatis.</p>
+                </div>
+                <div class="Textes2">
+                    <p>02 Lorem ipsum</p>
+                    <p>dolor sit amet consectetur <br> adipisicing elit. Rem est iure ea <br> magni maiores consequuntur <br> perferendis doloribus sint <br> repellendus molestias provident, <br> ut totam quis nesciunt, vero, <br> officiis dolore reprehenderit <br> perspiciatis.</p>
+                </div>
+                <div class="Textes3">               
+                    <p>03 Lorem ipsum</p>
+                    <p >dolor sit amet consectetur <br> adipisicing elit. Rem est iure ea <br> magni maiores consequuntur <br> perferendis doloribus sint <br> repellendus molestias provident, <br> ut totam quis nesciunt,  vero, <br> officiis dolore reprehenderit <br> perspiciatis.</p>
+                </div>
             </div>
         </div>
-
+        
         <!--Infos données jeu-->
-        <div>
-            <div>
-                <a href="", title="Image-Jeu"></a>
+        <div class="background-donnees">
+            <br>
+            <br>
+            <div class="block-image-donnees">
+                <div>
+                    <img src="/Projet-Puissance_4/assets/Images/img-donnee.jpeg" alt="Image WatchDogs qui va avec les données">
+                </div>
+                <div class="all-donnees">
+                    <div class="donnees-parties">
+                        <div class="text1">
+                            <p>Parties Jouées</p>
+                        </div>
+                        <div class="text2">
+                            <p>Temps Records</p>
+                        </div>
+                    </div>
+                    <div class="donnees-joueurs">
+                        <div class="text3">
+                            <p>Joueurs Connectés</p>
+                        </div>
+                        <div class="text4">
+                            <p>Joueurs Inscrits</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <p class="1">Parties Jouées</p>
-                <p class="2">Joueurs Connectés</p>
-                <p class="3">Temps Records</p>
-                <p class="4">Joueurs Inscrits</p>
-            </div>
+
+            <!--Infos sur les Créateurs-->
+            <h2 class="team">Notre Équipe</h2>
+            <p class="accroche-team">Toujours à l'affut de vos moindres questions</p>
+
+            
+            <p class="noms-team">Hywel</p>
+            <p>Game Developer</p>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+
+            <p class="noms-team">Jean</p>
+            <p>Game Developer</p>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+
+            <p class="noms-team">Alexandre</p>
+            <p>Game Developer</p>
+            <a href="insta"></a>
+            <a href="discord"></a>
+            <a href="facebook"></a>
+            <br>
         </div>
 
-        <!--Infos sur les Créateurs-->
-        <h2 class="team">Notre Équipe</h2>
-        <p class="accroche-team">Toujours à l'affut de vos moindres questions</p>
-
+        <div class="background-Infos">
+            <!--Informations et liens vers les réseaux sociaux et les autres pages-->
+            <div class="informations">
+                <article>
+                    <h4>Information</h4>
+                    <p>Quisque commodo facilisis purus, interdum volutpat arcu viverra sed.</p>
+                    <p><strong>Tel :</strong> 06 05 04 03 02</p>
+                    <p><strong>Email :</strong> support@powerofmemory.com</p>
+                    <p><strong>Location :</strong> Paris</p>
+                    <!--Lien vers les réseaux sociaux-->
+                    <a href="index.html">Facebook</a>
+                    <a href="index.html">Twitter</a>
+                    <a href="index.html">Google</a>
+                    <a href="index.html">Pinterest</a>
+                    <a href="index.html">Instagram</a>
+                </article>
+                <!--Lien vers d'autres pages html-->
+                <aside>
+                    <h4>Power of Memory</h4>
+                    <ul>
+                        <li><a href="index.html">Jouer !</a></li>
+                        <li><a href="index.html">Les scores</a></li>
+                        <li><a href="index.html">Nous contacter</a></li>
+                    </ul>
+                </aside>
+            </div>
         
-        <p class="noms-team">Hywel</p>
-        <p>Game Developer</p>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
 
-        <p class="noms-team">Jean</p>
-        <p>Game Developer</p>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-
-        <p class="noms-team">Alexandre</p>
-        <p>Game Developer</p>
-        <a href="insta"></a>
-        <a href="discord"></a>
-        <a href="facebook"></a>
-    </div> 
-
-    <!--Voici le footer>-->
-    <footer>
-        <h3 class="Info">Informations</h3>
-        <p>Tous nos liens pour tous vos avis et vos questions pertinents</p>
-
-        <!--Infos support jeu-->
-        <div class="Infos">
-            <p><strong>Tel</strong>: 06 05 04 03 02</p>
-            <p><strong>Email</strong>: support@memorygame.com</p>
-            <p><strong>Location</strong>: Paris</p>
+        <!--Voici le footer>-->
+        <footer>
+            <!--Message Cooyright-->
+            <p>Copyright © 2022 Tous droits réservés</p>
+        </footer>
         </div>
-        
-        <!--Liens header-->
-        <h3>Memory Game</h3>
-        <ul>
-            <li><a href="Jouer">Jouer !</a></li>
-            <li><a href="Scores">Les Scores</a></li>
-            <li><a href="Contact">Nous Contacter</a></li>
-        </ul>
-        
-        <!--Message Cooyright-->
-        <p>Copyright © 2022 Tous droits réservés</p>
-    </footer>
-</body>
+    </body>
 </html>
+
