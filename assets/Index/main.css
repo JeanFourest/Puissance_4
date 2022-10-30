@@ -84,11 +84,30 @@ body{
 .block-Texts{
     display:flex;
     align-self: center;
+    justify-content: space-around;
+    margin-top: 2%;
+    background-color: yellow;
+    width: 100%;
 }
 
+.Textes1{
+    background-color: blue;
+}
 
+.Textes2{
+    background-color: red;
+}
+
+.Textes3{
+    background-color: green;
+}
 
 /* Styles de la partie données et joueurs */
+
+.Watchdogs{
+    width: 500px;
+    height: 300px;
+}
 
 .background-donnees{
     background-color: rgb(24, 2, 50);
