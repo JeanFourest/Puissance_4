@@ -1,0 +1,35 @@
+#title {
+    background-image: url(../../images/api_thumb_450.jpg);
+    padding: 120px 620px 120px 620px;
+}
+
+.inscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.answer {
+    padding: 15px 0 15px 0;
+}
+
+.required_answer {
+    background-color: #5a2f70;
+    border: none;
+    border-radius: 2px;
+    padding: 15px 15px 15px 15px;
+}
+
+.submit {
+    background-color: #FFA500;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 2px;
+    padding: 15px 15px 15px 15px;
+    margin: 0 605px 0 0;
+}
+
+.space_out_section {
+    padding: 100px 0 100px 0;
+}

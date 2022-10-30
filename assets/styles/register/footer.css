@@ -1,0 +1,30 @@
+.informations {
+    display: flex;
+    justify-content: space-around;
+    margin: 150px 0 150px 0;
+}
+
+.orange {
+    color: #FFA500;
+}
+
+.transparent {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.social {
+    background-color: #FFA500;
+    color: #FFA500;
+}
+
+.social_logo {
+    padding: 0 15px 0 15px;
+}
+
+.bonus_nav {
+    padding: 10px 0 10px 0;
+}
+
+.copyright {
+    margin: 0 0 0 200px;
+}
