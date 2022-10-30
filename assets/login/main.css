@@ -72,3 +72,8 @@ body
     height: 50px;
     border-radius: 2px;
 }
+
+#bouttonConnexion:hover
+{
+    background-color: rgb(148, 96, 0);
+}
