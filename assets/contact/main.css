@@ -18,6 +18,7 @@ body
     align-items: center;
     background-image: url("/assets/login/background.png");
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
 }
 
