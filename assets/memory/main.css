@@ -6,4 +6,14 @@ body
     color: white;
     background-color: rgb(23, 0, 47);
     margin: 0px;
+    background-image: url("/assets/login/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.leJeu
+{
+    margin-top: 300px;
+    background-color: ;
 }
