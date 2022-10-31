@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body
+{
+    font-family: 'Lato', sans-serif;
+    color: white;
+    background-color: rgb(23, 0, 47);
+    margin: 0px;
+    background-image: url("/assets/login/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.leJeu
+{
+    margin-top: 100px;
+    background-color: rgb(18, 0, 37);
+}
+
+.lesDifficultes
+{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(54, 22, 87);
+    border-radius: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.lesDifficultes2
+{
+    padding: 10px;
+    background-color: rgb(102, 62, 141);
+    border-radius: 50px;
+}
+.lesDifficultes2:hover
+{
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.329);
+}
+
+
+
+.lesTableaux
+{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(102, 62, 141);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+
+}
+
+
+.tableau1
+{
+    background-color: rgb(54, 22, 87);
+    width: fit-content;
+    height: fit-content;
+    border-spacing: 10px;
+    border-radius: 10px;
+    margin-right: auto; 
+    margin-left: auto
+    
+}
+
+.td1
+{
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(138, 93, 184);
+}
+
+.box1
+{
+    display: flex;
+    justify-content: center;
+}
+
+.tableau2
+{
+    background-color: rgb(54, 22, 87);
+    width: fit-content;
+    height: fit-content;
+    border-spacing: 10px;
+    border-radius: 10px;
+    margin-right: auto; 
+    margin-left: auto
+}
+
+.td2
+{
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(138, 93, 184);
+}
+
+.box2
+{
+    display: flex;
+    justify-content: center;
+}
+
+.tableau3
+{
+    background-color: rgb(54, 22, 87);
+    width: fit-content;
+    height: fit-content;
+    border-spacing: 10px;
+    border-radius: 10px;
+    margin-right: auto; 
+    margin-left: auto
+}
+
+.td3
+{
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(138, 93, 184);
+}
+
+.box3
+{
+    display: flex;
+    justify-content: center;
+}
+
+.tableau4
+{
+    background-color: rgb(54, 22, 87);
+    width: fit-content;
+    height: fit-content;
+    border-spacing: 5px;
+    border-radius: 10px;
+    margin-right: auto; 
+    margin-left: auto
+}
+
+.td4
+{
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(138, 93, 184);
+}
+
+.box4
+{
+    display: flex;
+    justify-content: center;
+}

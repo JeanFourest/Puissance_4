@@ -1,0 +1,46 @@
+.header_and_main {
+    background-color: #240046;
+}
+
+.navigation {
+    padding: 20px 0 0 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.links_nav {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+/* unvisited link */
+a:link {
+    color: white;
+    text-decoration: none;
+  }
+  
+/* visited link */
+a:visited {
+    color: white;
+    text-decoration: none;
+
+}
+  
+/* mouse over link */
+a:hover {
+    color: rgb(84, 189, 224);
+    text-decoration: none;
+
+}
+  
+/* selected link */
+a:active {
+    color: white;
+    text-decoration: none;
+
+}
