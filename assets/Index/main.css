@@ -6,7 +6,7 @@
 
 body{
     font-family: 'Lato', sans-serif;
-    background-color: rgb(23,0,47);
+    background-color: rgba(16,14,46,255);
     margin: 0%;
     color:  white;
 }
@@ -46,7 +46,7 @@ body{
 .Jouer{
     margin-top: 1%;
     margin-bottom: 13%;
-    background-color: orange;
+    background-color: rgba(236,145,35,255);
     color: white;
     width: 10%;
     padding-top: 1.5%;
@@ -89,7 +89,7 @@ body{
 }
 
 #numTexte{
-    color: purple;
+    color: rgba(55,36,160,255);
     font-size: 200%;
 }
 
@@ -114,117 +114,82 @@ body{
 }
 
 .background-donnees{
-    background-color: rgb(24, 2, 50);
+    background-color: rgba(17,16,47,255);
 }
 
 .block-image-donnees{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    background-color: lightblue;
     
 }
 
 .blockJean{
-    background-color: orange;
     width: 80%;
     display: flex;
     justify-content: flex-start;
 }
 
 .all-donnees{
-    background-color: yellow;
     width: 90%;
 }
 
 #Text-box{
-    font-size: 100%;
+    font-size: 120%;
 }
 
 .Box1{
-    background-color: black;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 15%;
-    font-size: 20px;
+    margin-bottom: 9%;
+    font-size: 15px;
 }
 
 .Bloc1{
-    background-color: blue;
+    background-color: rgba(55,36,160,255);
     border-radius: 2px;
-    padding-left: 55px;
-    padding-right: 55px;
-    padding-top: 55px;
-    padding-bottom: 10px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .Bloc2{
-    background-color: red;
+    background-color: rgba(24,161,95,255);
     border-radius: 2px;
-    padding-top: 55px;
-    padding-left: 55px;
-    padding-right: 55px;
-    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 9%;
+
 }
 
 .Box2{
-    background-color: grey;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
+    font-size: 15px;
 }
 
 .Bloc3{
-    background-color: green;
+    background-color: rgba(185,28,168,255);
     border-radius: 2px;
+    padding-left: 40px;
+    padding-right: 37px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .Bloc4{
-    background-color: rgb(255, 0, 217);
-}
-
-.donnees-parties{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    padding-bottom: -10%;
-    background-color: aqua;
-    width: 300px;
-}
-
-.text1{
-    font-size: 90%;
-    background-color: blue;
+    background-color: rgba(236,145,35,255);
     border-radius: 2px;
-}
-
-.text2{
-    font-size: 90%;
-    background-color: rgb(0, 255, 0);
-    border-radius: 2px;
-}
-
-.donnees-joueurs{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    background-color: pink;
-    width: 300px;
-}
-
-.text3{
-    font-size: 90%;
-    background-color: red;
-    border-radius: 2px;
-}
-
-.text4{
-    font-size: 90%;
-    background-color: black;
-    border-radius: 2px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 9%;
 }
 
 
@@ -232,7 +197,7 @@ body{
 /* parties infomartions et contacts */
 
 .background-Infos{
-    background-color: rgb(14, 0, 29) ;
+    background-color: rgba(13,11,38,255);
 }
 
 .informations {
