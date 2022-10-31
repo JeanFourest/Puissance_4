@@ -23,10 +23,29 @@ body
 
 .lesDifficulte
 {
+    height: 70px;
     display: flex;
     justify-content: center;
     justify-content: space-around;
+    align-items: center;
+    background-color: rgb(54, 22, 87);
+    border-radius: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
+
+.lesDifficulte2
+{
+    padding: 10px;
+    background-color: rgb(102, 62, 141);
+    border-radius: 50px;
+}
+.lesDifficulte2:hover
+{
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.329);
+}
+
 
 
 .lesTableaux
@@ -34,17 +53,24 @@ body
     margin-top: 100px;
     display: flex;
     flex-direction: column;
+    background-color: rgb(102, 62, 141);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+
 }
 
 
 .tableau1
 {
-    background-color: yellowgreen;
+    background-color: rgb(54, 22, 87);
     width: fit-content;
     height: fit-content;
     border-spacing: 10px;
+    border-radius: 10px;
     margin-right: auto; 
     margin-left: auto
+    
 }
 
 .td1
@@ -63,7 +89,7 @@ body
 
 .tableau2
 {
-    background-color: yellowgreen;
+    background-color: rgb(54, 22, 87);
     width: fit-content;
     height: fit-content;
     border-spacing: 10px;
@@ -87,7 +113,7 @@ body
 
 .tableau3
 {
-    background-color: yellowgreen;
+    background-color: rgb(54, 22, 87);
     width: fit-content;
     height: fit-content;
     border-spacing: 10px;
@@ -111,7 +137,7 @@ body
 
 .tableau4
 {
-    background-color: yellowgreen;
+    background-color: rgb(54, 22, 87);
     width: fit-content;
     height: fit-content;
     border-spacing: 5px;
