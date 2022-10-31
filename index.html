@@ -35,53 +35,69 @@
                 </div>
             </div>
         </div>
+        <br>
+        <br>
 
         <!--Texte Explication Jeu-->
         <div class="block-Texts-Images"> <!---Block principal qui contient tous les blocks images et textes-->
             <div class="block-Images"> <!--Sous block du block principal contient les images-->
-                <img src="/Projet-Puissance_4/assets/Images/images1.png" alt="Image de petits écrans" id="Images">
+                <img src="/Projet-Puissance_4/assets/Images/images1.png" alt="Image de petits écrans" class="Images-ordi">
                 <img src="/Projet-Puissance_4/assets/Images/images2.jpeg" alt="Petit bonhomme s'amusant" id="Images">
                 <img src="/Projet-Puissance_4/assets/Images/images3.jpeg" alt="Image poker" id="Images">
             </div>
-            <div class="block-Texts"> <!--Sous block du block principal contient les textes d'explication-->
-                <div class="Textes1">
-                    <p>01 Lorem ipsum</p>
-                    <p>dolor sit amet consectetur <br> adipisicing elit. Rem est iure ea <br> magni maiores consequuntur <br> perferendis doloribus sint <br> repellendus molestias provident, <br> ut totam quis nesciunt, vero, <br> officiis dolore reprehenderit <br> perspiciatis.</p>
-                </div>
-                <div class="Textes2">
-                    <p>02 Lorem ipsum</p>
-                    <p>dolor sit amet consectetur <br> adipisicing elit. Rem est iure ea <br> magni maiores consequuntur <br> perferendis doloribus sint <br> repellendus molestias provident, <br> ut totam quis nesciunt, vero, <br> officiis dolore reprehenderit <br> perspiciatis.</p>
-                </div>
-                <div class="Textes3">               
-                    <p>03 Lorem ipsum</p>
-                    <p >dolor sit amet consectetur <br> adipisicing elit. Rem est iure ea <br> magni maiores consequuntur <br> perferendis doloribus sint <br> repellendus molestias provident, <br> ut totam quis nesciunt,  vero, <br> officiis dolore reprehenderit <br> perspiciatis.</p>
-                </div>
-            </div>
+            <br>
+
+            <!--Tableau pour les paragraphes d'explications du jeu-->
+            <table align="center">
+                <tr>
+                    <td id="numTexte">01</td>
+                    <td id="titreTexte">Lorem ipsum</td>
+                    <td id="numTexte">02</td>
+                    <td id="titreTexte">Lorem ipsum</td>
+                    <td id="numTexte">03</td>
+                    <td id="titreTexte">Lorem ipsum</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="paragrapheExplicationJeu"> <br> Dolor sit amet consectetur adipisicing elit. <br> Ad, repellendus cumque magni officia <br> deserunt necessitatibus tenetur. Alias <br> pariatur facilis incidunt in dicta dolorem? <br> Corporis magnam esse nobis molestias minima <br> minus!</td>
+                    <td></td>
+                    <td id="paragrapheExplicationJeu">Dolor sit amet consectetur adipisicing elit. <br> Consequatur saepe voluptas esse <br> voluptatem iusto veritatis rem, pariatur <br> facere eveniet incidunt dolor, velit commodi <br> error. Delectus distinctio at quae quam minima.</td>
+                    <td></td>
+                    <td id="paragrapheExplicationJeu">Dolor sit amet consectetur adipisicing elit. <br> Sequi fugit, fugiat doloribus blanditiis minus <br> et a consequatur consectetur rem voluptatum <br> asperiores voluptatibus, corrupti id vel veniam <br> animi necessitatibus eveniet? Distinctio.</td>
+                </tr>
+            </table>
         </div>
         
         <!--Infos données jeu-->
         <div class="background-donnees">
             <br>
             <br>
+            <br><br>
             <div class="block-image-donnees">
-                <div>
-                    <img class="Watchdogs" src="/Projet-Puissance_4/assets/Images/img-donnee.jpeg" alt="Image WatchDogs qui va avec les données">
-                </div>
-                <div class="all-donnees">
-                    <div class="donnees-parties">
-                        <div class="text1">
-                            <p>Parties Jouées</p>
-                        </div>
-                        <div class="text2">
-                            <p>Temps Records</p>
-                        </div>
+                <div class="blockJean">
+                    <div>
+                        <img class="Watchdogs" src="/Projet-Puissance_4/assets/Images/img-donnee.jpeg" alt="Image WatchDogs qui va avec les données">
                     </div>
-                    <div class="donnees-joueurs">
-                        <div class="text3">
-                            <p>Joueurs Connectés</p>
+                    <div class="all-donnees">
+                        <div class="Box1">
+                            <div class="Bloc1">
+                                <p id="Text-box">310</p>
+                                <p>Parties Joeuées</p>
+                            </div>
+                            <div class="Bloc2">
+                                <p id="Text-box">10 sec</p>
+                                <p>Temps Record</p>
+                            </div>
                         </div>
-                        <div class="text4">
-                            <p>Joueurs Inscrits</p>
+                        <div class="Box2">
+                            <div class="Bloc3">
+                                <p id="Text-box">1020</p>
+                                <p>Joueurs Connectés</p>
+                            </div>
+                            <div class="Bloc4">
+                                <p id="Text-box">21 300</p>
+                                <p>Joueurs Inscrits</p>
+                            </div>
                         </div>
                     </div>
                 </div>

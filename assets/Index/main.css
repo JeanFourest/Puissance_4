@@ -17,6 +17,7 @@ body{
 
 .background-naviguation{
     background-image: url("/Projet-Puissance_4/assets/Images/background.png");
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -75,38 +76,41 @@ body{
     flex-direction: row;
     margin-right: 10%;
     margin-top: 3%;
+    margin-right: -3%;
+}
+
+.Images-ordi{
+    padding-right: 5%;
+    width: 500px;
 }
 
 #Images{
     padding-right: 5%;
 }
 
-.block-Texts{
-    display:flex;
-    align-self: center;
-    justify-content: space-around;
-    margin-top: 2%;
-    background-color: yellow;
-    width: 100%;
+#numTexte{
+    color: purple;
+    font-size: 200%;
 }
 
-.Textes1{
-    background-color: blue;
+#titreTexte{
+    font-size: 90%;
 }
 
-.Textes2{
-    background-color: red;
+#paragrapheExplicationJeu{
+    color: lightgray;
+    font-weight: lighter;
+    font-size: 80%;
 }
 
-.Textes3{
-    background-color: green;
-}
+
 
 /* Styles de la partie données et joueurs */
 
 .Watchdogs{
     width: 500px;
     height: 300px;
+    border-radius: 2px;
 }
 
 .background-donnees{
@@ -117,70 +121,110 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: row;
+    background-color: lightblue;
     
 }
 
-.all-donnees{
+.blockJean{
+    background-color: orange;
+    width: 80%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 3%;
-    padding-right: 10%;
+    justify-content: flex-start;
+}
+
+.all-donnees{
+    background-color: yellow;
+    width: 90%;
+}
+
+#Text-box{
+    font-size: 100%;
+}
+
+.Box1{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 15%;
+    font-size: 20px;
+}
+
+.Bloc1{
+    background-color: blue;
+    border-radius: 2px;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 55px;
+    padding-bottom: 10px;
+}
+
+.Bloc2{
+    background-color: red;
+    border-radius: 2px;
+    padding-top: 55px;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-bottom: 10px;
+}
+
+.Box2{
+    background-color: grey;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.Bloc3{
+    background-color: green;
+    border-radius: 2px;
+}
+
+.Bloc4{
+    background-color: rgb(255, 0, 217);
 }
 
 .donnees-parties{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
     padding-bottom: -10%;
+    background-color: aqua;
+    width: 300px;
 }
 
 .text1{
     font-size: 90%;
     background-color: blue;
     border-radius: 2px;
-    margin-top: -12%;
-    margin-bottom: 12%;
-    margin-right: 10%;
-    text-align: center;
-    padding-left: 23%;
-    padding-right: 23%;
-    padding-top: 20%;
 }
 
 .text2{
     font-size: 90%;
     background-color: rgb(0, 255, 0);
     border-radius: 2px;
-    text-align: center;
-    margin-top: -12%;
-    margin-bottom: 12%;
-    padding-left: 20%;
-    padding-right: 20%;
 }
 
 .donnees-joueurs{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: pink;
+    width: 300px;
 }
 
 .text3{
     font-size: 90%;
     background-color: red;
     border-radius: 2px;
-    text-align: center;
-    padding-left: 20%;
-    padding-right: 16%;
-    margin-right: 10%;
-    padding-bottom: 20%;
 }
 
 .text4{
     font-size: 90%;
     background-color: black;
     border-radius: 2px;
-    text-align: center;
-    padding-left: 20%;
-    padding-right: 20%;
 }
 
 
