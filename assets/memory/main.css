@@ -21,7 +21,7 @@ body
     background-color: rgb(18, 0, 37);
 }
 
-.lesDifficulte
+.lesDifficultes
 {
     height: 70px;
     display: flex;
@@ -33,15 +33,17 @@ body
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
+    padding-left: 10%;
+    padding-right: 10;
 }
 
-.lesDifficulte2
+.lesDifficultes2
 {
     padding: 10px;
     background-color: rgb(102, 62, 141);
     border-radius: 50px;
 }
-.lesDifficulte2:hover
+.lesDifficultes2:hover
 {
     box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.329);
 }
@@ -93,6 +95,7 @@ body
     width: fit-content;
     height: fit-content;
     border-spacing: 10px;
+    border-radius: 10px;
     margin-right: auto; 
     margin-left: auto
 }
@@ -117,6 +120,7 @@ body
     width: fit-content;
     height: fit-content;
     border-spacing: 10px;
+    border-radius: 10px;
     margin-right: auto; 
     margin-left: auto
 }
@@ -141,6 +145,7 @@ body
     width: fit-content;
     height: fit-content;
     border-spacing: 5px;
+    border-radius: 10px;
     margin-right: auto; 
     margin-left: auto
 }
