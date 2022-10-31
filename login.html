@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/login/header.css">
     <link rel="stylesheet" href="assets/login/main.css">
     <link rel="stylesheet" href="assets/login/footer.css">
+    <script src="https://kit.fontawesome.com/306ccec929.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -24,7 +25,7 @@
             </div>
         </div>
     </header>
-
+    <!-- il y a l'image liee avec la class texteConnexion dans le main.css -->
     <div class="texteConnexion">
         <h2>CONNEXION</h2>
     </div>
@@ -40,29 +41,38 @@
         </form>
     </div>
 
-    <!-- les informations pour le footer avec les liens -->
-    <footer>
+    <!-- les informations pour le footer avec les liens partie a gauche-->
+    <div class="footer1">
         <div class="information">
             <h1>information</h1>
 
-            <p>bruuuuuuuuuuuuuuuuh</p>
-            <p><strong class="footerStrong">Tel :</strong> 06 05 04 03 02</p>
-            <p><strong class="footerStrong">Email :</strong> support@powerofmemory.com</p>
-            <p><strong class="footerStrong">Location :</strong> Paris</p>
+            <p class="gris">bruuuuuuuuuuuuuuuuh</p>
+            <p><span class="footerOrange">Tel :</span><span class="gris"> 06 05 04 03 02</span></p>
+            <p><span class="footerOrange">Email :</span><span class="gris"> support@powerofmemory.com</span></p>
+            <p><span class="footerOrange">Location :</span><span class="gris"> Paris</span></p>
+
+            <div class="imageLiens">
+                <a href="" class="logos"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
+                <a href="" class="logos"><i class="fa-brands fa-square-twitter fa-2xl"></i></a>
+                <a href="" class="logos"><i class="fa-brands fa-google fa-xl"></i></a>
+                <a href="" class="logos"><i class="fa-brands fa-square-pinterest fa-2xl"></i></a>
+                <a href="" class="logos"><i class="fa-brands fa-square-instagram fa-2xl"></i></a>
+            </div>
+
+            <p class="copyright">Copyright © 2022 Tous droits réservés</p>
 
         </div>
         
         <div class="powerOfMemory">
             <h1>Power Of Memory</h1>
-
+            <!-- partie a droite du footer avec les liens-->
             <ul>
-                <li class="footerStrong"><a href="" class="gris">Jouer !</a></li>
-                <li class="footerStrong"><a href="" class="gris">Les scores</a></li>
-                <li class="footerStrong"><a href="" class="gris">Nous contacter</a></li>
+                <li class="footerOrange"><a href=""><span class="gris2"> Jouer ! </span></a></li>
+                <li class="footerOrange"><a href=""><span class="gris2"> Les scores </span></a></li>
+                <li class="footerOrange"><a href=""><span class="gris2"> Nous contacter </span></a></li>
             </ul>
             
         </div>
-    </footer>
-
+    </div>
 </body>
 </html>
