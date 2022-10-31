@@ -1,0 +1,24 @@
+#title {
+    background-image: url(../../images/city_background.jpg);
+    padding: 120px 0 120px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.score {
+    width: 100%;
+    background-color: #244446;
+}
+
+th {
+    padding: 20px;
+}
+
+.score, th, tr {
+    border: 1px solid #FFFFFF;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: #644442;
+}
