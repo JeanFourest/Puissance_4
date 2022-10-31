@@ -211,7 +211,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
 #Createurs{
