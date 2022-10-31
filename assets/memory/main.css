@@ -21,12 +21,30 @@ body
     background-color: rgb(18, 0, 37);
 }
 
+.lesDifficulte
+{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+
+.lesTableaux
+{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+
 .tableau1
 {
-    background-color: lightgreen;
+    background-color: yellowgreen;
     width: fit-content;
     height: fit-content;
     border-spacing: 10px;
+    margin-right: auto; 
+    margin-left: auto
 }
 
 .td1
@@ -34,10 +52,82 @@ body
     border-radius: 5px;
     width: 100px;
     height: 100px;
-    background-color: lightblue;
+    background-color: green;
 }
 
-.box
+.box1
+{
+    display: flex;
+    justify-content: center;
+}
+
+.tableau2
+{
+    background-color: yellowgreen;
+    width: fit-content;
+    height: fit-content;
+    border-spacing: 10px;
+    margin-right: auto; 
+    margin-left: auto
+}
+
+.td2
+{
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+.box2
+{
+    display: flex;
+    justify-content: center;
+}
+
+.tableau3
+{
+    background-color: yellowgreen;
+    width: fit-content;
+    height: fit-content;
+    border-spacing: 10px;
+    margin-right: auto; 
+    margin-left: auto
+}
+
+.td3
+{
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    background-color: green;
+}
+
+.box3
+{
+    display: flex;
+    justify-content: center;
+}
+
+.tableau4
+{
+    background-color: yellowgreen;
+    width: fit-content;
+    height: fit-content;
+    border-spacing: 5px;
+    margin-right: auto; 
+    margin-left: auto
+}
+
+.td4
+{
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: green;
+}
+
+.box4
 {
     display: flex;
     justify-content: center;
