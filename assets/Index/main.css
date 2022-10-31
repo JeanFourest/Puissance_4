@@ -15,7 +15,7 @@ body{
 
 /* Arrière plan du header jusqu'au bouton Jouer */
 
-.background-naviguation{
+.backgroundNaviguation{
     background-image: url("/Projet-Puissance_4/assets/Images/background.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -25,20 +25,20 @@ body{
 
 /* Styles de la partie accueil Bienvenue ainsi que le bouton Jouer */
 
-.titre-accueil{
+.titreAccueil{
     text-align: center;
     font-size: 400%;
     margin-top: 10%;
 }
 
-.accroche-titre{
+.accrocheTitre{
     color : lightgray;
     text-align: center;
     margin-top: -1.8%;
     font-weight: lighter;
 }
 
-.Block-Jouer{
+.BlocJouer{
     display: flex;
     justify-content: center;
 }
@@ -65,13 +65,13 @@ body{
 
 /* Style de la partie explication du jeu */
 
-.block-Texts-Images{
+.blocTextsImages{
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.block-Images{
+.blocImages{
     display: flex;
     flex-direction: row;
     margin-right: 10%;
@@ -79,7 +79,7 @@ body{
     margin-right: -3%;
 }
 
-.Images-ordi{
+.ImageOrdi{
     padding-right: 5%;
     width: 500px;
 }
@@ -113,28 +113,28 @@ body{
     border-radius: 2px;
 }
 
-.background-donnees{
+.backgroundDonnees{
     background-color: rgba(17,16,47,255);
 }
 
-.block-image-donnees{
+.blocImageDonnees{
     display: flex;
     justify-content: center;
     flex-direction: row;
     
 }
 
-.blockJean{
+.blocJean{
     width: 80%;
     display: flex;
     justify-content: flex-start;
 }
 
-.all-donnees{
+.allDonnees{
     width: 90%;
 }
 
-#Text-box{
+#TextBox{
     font-size: 120%;
 }
 
@@ -196,15 +196,15 @@ body{
 
 /* parties infomartions et contacts */
 
-.background-Infos{
+.backgroundInfosContact{
     background-color: rgba(13,11,38,255);
 }
 
-.informations {
+.informations{
     display: flex;
     justify-content: space-around;
 }
 
-strong {
+strong{
     color: #FFA500;
 }
