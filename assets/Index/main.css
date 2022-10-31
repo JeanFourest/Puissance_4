@@ -32,13 +32,13 @@ body{
 }
 
 .accrocheTitre{
-    color : lightgray;
+    color : rgba(130,128,153,255);
     text-align: center;
     margin-top: -1.8%;
     font-weight: lighter;
 }
 
-.BlocJouer{
+.blocJouer{
     display: flex;
     justify-content: center;
 }
@@ -79,7 +79,7 @@ body{
     margin-right: -3%;
 }
 
-.ImageOrdi{
+.imageOrdi{
     padding-right: 5%;
     width: 500px;
 }
@@ -98,7 +98,7 @@ body{
 }
 
 #paragrapheExplicationJeu{
-    color: lightgray;
+    color: rgba(130,128,153,255);
     font-weight: lighter;
     font-size: 80%;
 }
@@ -134,7 +134,7 @@ body{
     width: 90%;
 }
 
-#TextBox{
+#textBox{
     font-size: 120%;
 }
 
@@ -194,7 +194,76 @@ body{
 
 
 
-/* parties infomartions et contacts */
+/* Style de la partie Infos sur les Créateurs */
+
+.team{
+    text-align: center;
+    font-size: 40px;
+}
+
+.accrocheTeam{
+    text-align: center;
+    margin-top: -2%;
+    color: rgba(130,128,153,255);
+}
+
+.blocCreateurs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10%;
+}
+
+#Createurs{
+    background-color: rgba(13,11,38,255);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+#nomsTeam{
+    text-align: center;
+    font-size: 110%;
+}
+
+#textJob{
+    text-align: center;
+    color: rgba(130,128,153,255);
+    font-size: 90%;
+}
+
+#Pdp{
+    border-radius: 100px;
+    width: 130px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style de la partie infomartions et contacts */
 
 .backgroundInfosContact{
     background-color: rgba(13,11,38,255);
