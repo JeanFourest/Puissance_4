@@ -9,10 +9,10 @@
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">            
             <!--Lien vers la page style.css-->
-            <link rel="stylesheet" href="assets/register_style.css">
+            <link rel="stylesheet" href="assets/myaccount_style.css">
             <!--Ajouter les boutons de réseaux sociaux-->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <title>Inscription</title>
+            <title>Mon compte</title>
         </head>
         <body>
             <div class="header_and_main">
@@ -30,27 +30,47 @@
                         </nav>
                     </div>
                 </header>
-                <h1 id="title">INSCRIPTION</h1>
-                <!--Inscription sur le site-->
+                <h1 id="title">MON COMPTE</h1>
+                <!--Changer son adresse email-->
                 <section class="space_out_section">
-                    <div class="inscription">
-                        <label for="Email"></label>
-                        <input type="email" id="Email" name="Email" placeholder="Email" size="100" required class="required_answer">
+                    <div class="change_info">
+                        <h3>Modifier mon adresse email :</h3>
+                        <label for="old_email"></label>
+                        <input type="email" id="old_email" name="old_email" placeholder="Ancien email" size="100" required class="required_answer">
                     </div>
-                    <div class="inscription">
-                        <label for="pseudonym"></label>
-                        <input type="text" id="Pseudo" name="pseudonym" placeholder="Pseudo" size="100" required class="required_answer">
+                    <div class="change_info">
+                        <label for="new_email"></label>
+                        <input type="email" id="new_email" name="new_email" placeholder="Nouvel email" size="100" required class="required_answer">
                     </div>
-                    <div class="inscription">
+                    <div class="change_info">
                         <label for="password"></label>
                         <input type="password" id="password" name="password" placeholder="Mot de passe" size="100" required class="required_answer">
                     </div>
-                    <div class="inscription">
+                    <div class="change_info">
                         <label for="confirm_password"></label>
                         <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirmez le mot de passe" size="100" required class="required_answer">
                     </div>
-                    <div class="inscription" class="submit">
-                        <input type="submit" value="Inscription" class="submit">
+                    <div class="change_info" class="submit">
+                        <input type="submit" value="Changer mon email" class="submit">
+                    </div>
+                </section>
+                <!--Changer son mot de passe-->
+                <section class="space_out_section">
+                    <div class="change_info">
+                        <h3>Modifier mon mot de passe :</h3>
+                        <label for="old_password"></label>
+                        <input type="password" id="old_password" name="old_password" placeholder="Ancien mot de passe" size="100" required class="required_answer">
+                    </div>
+                    <div class="change_info">
+                        <label for="new_password"></label>
+                        <input type="password" id="new_password" name="new_password" placeholder="Nouveau mot de passe" size="100" required class="required_answer">
+                    </div>
+                    <div class="change_info">
+                        <label for="confirm_password"></label>
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirmez le mot de passe" size="100" required class="required_answer">
+                    </div>
+                    <div class="change_info" class="submit">
+                        <input type="submit" value="Changer mon mot de passe" class="submit">
                     </div>
                 </section>
             </div>
