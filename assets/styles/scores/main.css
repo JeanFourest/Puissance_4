@@ -7,18 +7,20 @@
 
 .score {
     width: 100%;
-    background-color: #244446;
 }
 
-th {
+th, td {
     padding: 20px;
 }
 
-.score, th, tr {
-    border: 1px solid #FFFFFF;
-    border-collapse: collapse;
+th {
+    border: 3px solid rgb(127, 85, 161);
+    border-radius: 10px;
+    background-color: rgb(87, 48, 119);
 }
 
-tr:nth-child(even) {
-    background-color: #644442;
+tr ,td {
+    border: 3px solid rgb(72, 16, 117);
+    border-radius: 10px;
 }
+
