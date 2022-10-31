@@ -1,7 +1,9 @@
 footer {
     margin-top: 200px;
+    display: flex;
+    justify-content: center;
 }
 
 article p, footer, aside a {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(130,128,153,255);
 }

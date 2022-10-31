@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="assets/Index/footer.css">
     </head>
     <body>
-        <div class="background-naviguation">
+        <div class="backgroundNaviguation">
             <!--Barre de naviguation de la page-->
             <header> 
                 <p class="title">Memory Game</p> 
@@ -26,93 +26,119 @@
 
             <!--Ici c'est le Bienvenue-->
             <div> 
-                <h1 class="titre-accueil">BIENVENUE DANS <br> NOTRE INCROYABLE JEU!</h1>
+                <h1 class="titreAccueil">BIENVENUE DANS <br> NOTRE INCROYABLE JEU!</h1>
 
-                <p class="accroche-titre">Venez tester votre mémoire sur ce jeu</p>
+                <p class="accrocheTitre">Venez tester votre mémoire sur ce jeu</p>
 
-                <div class="Block-Jouer">
+                <div class="blocJouer">
                     <a href="Jouer" class="Jouer"> <div>JOUER !</div> </a>
                 </div>
             </div>
         </div>
+        <br>
+        <br>
 
         <!--Texte Explication Jeu-->
-        <div class="block-Texts-Images"> <!---Block principal qui contient tous les blocks images et textes-->
-            <div class="block-Images"> <!--Sous block du block principal contient les images-->
-                <img src="/Projet-Puissance_4/assets/Images/images1.png" alt="Image de petits écrans" id="Images">
+        <div class="blocTextsImages"> <!---Bloc principal qui contient tous les blocs images et textes-->
+            <div class="blocImages"> <!--Sous bloc du bloc principal contient les images-->
+                <img src="/Projet-Puissance_4/assets/Images/images1.png" alt="Image de petits écrans" class="imageOrdi">
                 <img src="/Projet-Puissance_4/assets/Images/images2.jpeg" alt="Petit bonhomme s'amusant" id="Images">
                 <img src="/Projet-Puissance_4/assets/Images/images3.jpeg" alt="Image poker" id="Images">
             </div>
-            <div class="block-Texts"> <!--Sous block du block principal contient les textes d'explication-->
-                <div class="Textes1">
-                    <p>01 Lorem ipsum</p>
-                    <p>dolor sit amet consectetur <br> adipisicing elit. Rem est iure ea <br> magni maiores consequuntur <br> perferendis doloribus sint <br> repellendus molestias provident, <br> ut totam quis nesciunt, vero, <br> officiis dolore reprehenderit <br> perspiciatis.</p>
-                </div>
-                <div class="Textes2">
-                    <p>02 Lorem ipsum</p>
-                    <p>dolor sit amet consectetur <br> adipisicing elit. Rem est iure ea <br> magni maiores consequuntur <br> perferendis doloribus sint <br> repellendus molestias provident, <br> ut totam quis nesciunt, vero, <br> officiis dolore reprehenderit <br> perspiciatis.</p>
-                </div>
-                <div class="Textes3">               
-                    <p>03 Lorem ipsum</p>
-                    <p >dolor sit amet consectetur <br> adipisicing elit. Rem est iure ea <br> magni maiores consequuntur <br> perferendis doloribus sint <br> repellendus molestias provident, <br> ut totam quis nesciunt,  vero, <br> officiis dolore reprehenderit <br> perspiciatis.</p>
-                </div>
-            </div>
+            <br>
+
+            <!--Tableau pour les paragraphes d'explications du jeu-->
+            <table align="center">
+                <tr>
+                    <td id="numTexte">01</td>
+                    <td id="titreTexte">Lorem ipsum</td>
+                    <td id="numTexte">02</td>
+                    <td id="titreTexte">Lorem ipsum</td>
+                    <td id="numTexte">03</td>
+                    <td id="titreTexte">Lorem ipsum</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="paragrapheExplicationJeu"> <br> Dolor sit amet consectetur adipisicing elit. <br> Ad, repellendus cumque magni officia <br> deserunt necessitatibus tenetur. Alias <br> pariatur facilis incidunt in dicta dolorem? <br> Corporis magnam esse nobis molestias minima <br> minus!</td>
+                    <td></td>
+                    <td id="paragrapheExplicationJeu">Dolor sit amet consectetur adipisicing elit. <br> Consequatur saepe voluptas esse <br> voluptatem iusto veritatis rem, pariatur <br> facere eveniet incidunt dolor, velit commodi <br> error. Delectus distinctio at quae quam minima.</td>
+                    <td></td>
+                    <td id="paragrapheExplicationJeu">Dolor sit amet consectetur adipisicing elit. <br> Sequi fugit, fugiat doloribus blanditiis minus <br> et a consequatur consectetur rem voluptatum <br> asperiores voluptatibus, corrupti id vel veniam <br> animi necessitatibus eveniet? Distinctio.</td>
+                </tr>
+            </table>
         </div>
-        
+        <br><br><br>
+    
         <!--Infos données jeu-->
-        <div class="background-donnees">
+        <div class="backgroundDonnees">
             <br>
             <br>
-            <div class="block-image-donnees">
-                <div>
-                    <img src="/Projet-Puissance_4/assets/Images/img-donnee.jpeg" alt="Image WatchDogs qui va avec les données">
-                </div>
-                <div class="all-donnees">
-                    <div class="donnees-parties">
-                        <div class="text1">
-                            <p>Parties Jouées</p>
-                        </div>
-                        <div class="text2">
-                            <p>Temps Records</p>
-                        </div>
+            <br><br>
+            <div class="blocImageDonnees">
+                <div class="blocJean">
+                    <div>
+                        <img class="Watchdogs" src="/Projet-Puissance_4/assets/Images/img-donnee.jpeg" alt="Image WatchDogs qui va avec les données">
                     </div>
-                    <div class="donnees-joueurs">
-                        <div class="text3">
-                            <p>Joueurs Connectés</p>
+                    <div class="allDonnees">
+                        <div class="Box1">
+                            <div class="Bloc1">
+                                <p id="textBox">310</p>
+                                <p>Parties Joeuées</p>
+                            </div>
+                            <div class="Bloc2">
+                                <p id="textBox">10 sec</p>
+                                <p>Temps Record</p>
+                            </div>
                         </div>
-                        <div class="text4">
-                            <p>Joueurs Inscrits</p>
+                        <div class="Box2">
+                            <div class="Bloc3">
+                                <p id="textBox">1020</p>
+                                <p>Joueurs Connectés</p>
+                            </div>
+                            <div class="Bloc4">
+                                <p id="textBox">21 300</p>
+                                <p>Joueurs Inscrits</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <br><br><br><br><br><br>
 
             <!--Infos sur les Créateurs-->
             <h2 class="team">Notre Équipe</h2>
-            <p class="accroche-team">Toujours à l'affut de vos moindres questions</p>
+            <p class="accrocheTeam">Toujours à l'affut de vos moindres questions</p>
 
-            
-            <p class="noms-team">Hywel</p>
-            <p>Game Developer</p>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-
-            <p class="noms-team">Jean</p>
-            <p>Game Developer</p>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-
-            <p class="noms-team">Alexandre</p>
-            <p>Game Developer</p>
-            <a href="insta"></a>
-            <a href="discord"></a>
-            <a href="facebook"></a>
-            <br>
+            <div class="blocCreateurs">
+                <div id="Createurs">
+                    <img src="/Projet-Puissance_4/assets/Images/pdpHywel.jpeg" alt="Photo de profil Hywel" id="Pdp">
+                    <p id="nomsTeam">Hywel</p>
+                    <p id="textJob">Game Developer</p>
+                    <a href="index.html">Facebook</a>
+                    <a href="index.html">Discord</a>
+                    <a href="index.html">Instagram</a>
+                </div>
+                <div id="Createurs">
+                    <img src="/Projet-Puissance_4/assets/Images/pdpJean.png" alt="Photo de profil Jean" id="Pdp">
+                    <p id="nomsTeam" >Jean</p>
+                    <p id="textJob">Game Developer</p>
+                    <a href="index.html">Facebook</a>
+                    <a href="index.html">Discord</a>
+                    <a href="index.html">Instagram</a>
+                </div>
+                <div id="Createurs">
+                    <img src="/Projet-Puissance_4/assets/Images/pdpAlex.png" alt="Photo de profil Alexandre" id="Pdp">
+                    <p id="nomsTeam">Alexandre</p>
+                    <p id="textJob">Game Developer</p>
+                    <a href="index.html">Facebook</a>
+                    <a href="index.html">Discord</a>
+                    <a href="index.html">Instagram</a>
+                </div>
+            </div>
+            <br><br><br><br>
         </div>
 
-        <div class="background-Infos">
+        <div class="backgroundInfosContact">
             <!--Informations et liens vers les réseaux sociaux et les autres pages-->
             <div class="informations">
                 <article>
@@ -144,6 +170,7 @@
         <footer>
             <!--Message Cooyright-->
             <p>Copyright © 2022 Tous droits réservés</p>
+            <br>
         </footer>
         </div>
     </body>
