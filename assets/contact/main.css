@@ -13,10 +13,12 @@ body
     background-color: Blue;
     width: 100%;
     height: 250px;
+    margin-top: 25px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/assets/login/background.png");
+    background-image: url("/assets/Images/background.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
