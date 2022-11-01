@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    background-color: white;
+}
+
+.fenêtreChat{
+    background-color: rgba(66,114,255,255);
+    width:450px;
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.4);
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header img{
+    border-radius: 300px;
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+}
+.header p{
+    color: white;
+    padding: 15px;
+}
+
+.main{
+    background-color: white;
+}
