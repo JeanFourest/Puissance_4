@@ -8,22 +8,55 @@
     <link rel="stylesheet" href="/Projet-Puissance_4/assets/Chat/main.css">
 </head>
 <body>
-    <!--Fenêtre de chat-->
+
+    <!--Fenêtre de Chat-->
     <div class="fenêtreChat">
-        <!--Le header du chat-->
+        <!--Le header de la fenêtre du Chat-->
         <div class="header">
             <img src="/Projet-Puissance_4/assets/Images/pdpChat.png" alt="Photo de profil robot">
             <p>Chat général</p>
         </div>
+
         <!--L'affichage des messages ainsi que l'écriture et l'envoie des messages-->
         <div class="main">
-            <p class="messageEnvoye">Hello</p>
-            <p class="messageRecu"> Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. <br> Provident deleniti alias sint a <br> assumenda, et delectus veritatis <br> animi soluta? Maxime possimus <br> quibusdam fugiat et? Quibusdam <br> iure consequuntur temporibus labore <br> velit.</p>
+            <table>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td id="nameUser">Moi</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="messageEnvoye">Hello</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td id="date">Aujourd'hui à 19h22</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="nameUser">Arthur</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><img src="/Projet-Puissance_4/assets/Images/pdpChat.png" alt="Photo de profil utilisateur" class="pdpUser"></td>
+                    <td class="messageRecu" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sapiente cum, ducimus ipsam itaque adipisci animi omnis obcaecati error praesentium in culpa consequatur sed harum inventore vitae incidunt, alias quo!</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="date">Aujourd'hui à 19h36</td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
-        <!--Le footer du chat-->
+
+        <!-- Le footer de la fenêtre de Chat-->
         <div class="footer">
             <form>
-                <input type="text" name="">
+                <input type="text" name="" placeholder="Votre message...">
                 <button>Envoyer</button>
             </form>
         </div>
