@@ -16,7 +16,7 @@ body{
 /* Arrière plan du header jusqu'au bouton Jouer */
 
 .backgroundNaviguation{
-    background-image: url("/Projet-Puissance_4/assets/Images/background.png");
+    background-image: url("/assets/Images/background.png");
     background-position: center;
     background-repeat: no-repeat;
 }
