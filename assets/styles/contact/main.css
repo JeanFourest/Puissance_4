@@ -1,29 +1,46 @@
-.texteContacter {
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body
+{
+    font-family: 'Lato', sans-serif;
+    color: white;
+    background-color: rgb(23, 0, 47);
+    margin: 0px;
+}
+
+.texteContacter
+{
     background-color: Blue;
     width: 100%;
     height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../../images/background.png");
+    background-image: url("/assets/Images/background.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.contacter {
+.contacter
+{
     display: flex;
     justify-content: center;
     margin-top: 100px;
+    /*background-color: rgb(144, 238, 222);*/
 }
 
-.boite {
+.boite
+{
     display: flex;
     justify-content: space-between;
     width: 950px;
+    /*background-color: rgb(2, 228, 2);*/
+
 }
 
-.boite2 {
+.boite2
+{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,24 +50,30 @@
     height: 200px;
 }
 
-.paraBoite {
+.paraBoite
+{
     margin-top: 40px;
 }
 
-.formulaire {
+.formulaire
+{
     display: flex;
     justify-content: center;
     margin-top: 40px;
     margin-bottom: 40px;
+    /*background-color: lightcyan;*/
 }
 
-.fomulaire2 {
+.fomulaire2
+{
+    /*background-color: lightcoral;*/
     width: 100%;
     height: 280px;
     margin-right: 440px;
 }
 
-#nom {
+#nom
+{
     background-color: rgb(58, 31, 86);
     border: none;
     margin: 10px;
@@ -62,7 +85,8 @@
     color: white;
 }
 
-#email {
+#email
+{
     background-color: rgb(58, 31, 86);
     border: none;
     margin: 10px;
@@ -74,7 +98,8 @@
     color: white;
 }
 
-#sujet {
+#sujet
+{
     background-color: rgb(58, 31, 86);
     border: none;
     margin: 10px;
@@ -86,7 +111,8 @@
     color: white;
 }
 
-#message {
+#message
+{
     background-color: rgb(58, 31, 86);
     border: none;
     margin: 10px;
@@ -100,7 +126,8 @@
     color: white;
 }
 
-#bouttonformulaire {
+#bouttonformulaire
+{
     border: none;
     background-color: orange;
     color: white;
@@ -110,6 +137,7 @@
     border-radius: 2px;
 }
 
-#bouttonformulaire:hover {
+#bouttonformulaire:hover
+{
     background-color: rgb(148, 96, 0);
 }
