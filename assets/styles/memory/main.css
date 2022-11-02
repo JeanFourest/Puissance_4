@@ -28,6 +28,137 @@
     box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.329);
 }
 
+.emplacementChat{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    background-color: white;
+    position: absolute;
+    top: 100px; 
+    left: 1000px;
+}
+
+.fenêtreChat {
+    background-color: rgba(66,114,255,255);
+    width:450px;
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.4);
+}
+
+
+
+/* Style du header du chat */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header img {
+    border-radius: 300px;
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+}
+
+.header p {
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+}
+
+
+
+/* Style boîte des messages avec ses infos */
+
+.main {
+    background-color: white;
+    flex: 1;
+    padding: 20px 30px;
+}
+
+#nameUser {
+    color: rgba(188,187,187,255);
+    font-size: 80%;
+    padding-left: 3px;
+}
+
+.messageEnvoye {
+    background-color: rgba(62,118,253,255);
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#date {
+    color: rgba(188,187,187,255);
+    font-size: 50%;
+    padding-left: 3px;
+}
+
+.pdpUser {
+    border-radius: 300px;
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+.messageRecu {
+    background-color: rgba(247,247,249,255);
+    padding: 10px;
+    color: gray;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+/* Style du footer du chat */
+
+.footer {
+    background-color: white;
+}
+
+.footer form {
+    display: flex;
+}
+
+form input {
+    flex: 0.7;
+    height: 45px;
+    outline: auto;
+    outline-color: rgba(226,225,226,255);
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+::placeholder {
+    padding-left: 10px;
+    color: rgba(225,224,224,255);
+}
+
+form button {
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: -100px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
 .lesTableaux {
     margin-top: 100px;
     display: flex;
