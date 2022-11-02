@@ -1,15 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
-body
-{
-    font-family: 'Lato', sans-serif;
-    color: white;
-    background-color: rgb(23, 0, 47);
-    margin: 0px;
-}
-
-.texteConnexion
-{
+.texteConnexion {
     background-color: Blue;
     width: 100%;
     height: 250px;
@@ -17,32 +6,29 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/assets/Images/background.png");
+    background-image: url("../../images/background.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.connexion
-{
+.connexion {
     margin-top: 100px;
     display: flex;
     justify-content: center;
 }
 
-.connexion2
-{
+.connexion2 {
     display: flex;
     flex-direction: column;
     
 }
 
-::placeholder
-{
+::placeholder {
     background-color: rgb(58, 31, 86);
 }
-#email
-{
+
+#email {
     background-color: rgb(58, 31, 86);
     border: none;
     padding-left: 20px;
@@ -52,8 +38,8 @@ body
     height: 40px;
     color: white;
 }
-#mdp
-{
+
+#mdp {
     background-color: rgb(58, 31, 86);
     border: none;
     padding-left: 20px;
@@ -64,8 +50,8 @@ body
     color: white;
 
 }
-#bouttonConnexion
-{
+
+#bouttonConnexion {
     border: none;
     background-color: orange;
     color: white;
@@ -74,7 +60,6 @@ body
     border-radius: 2px;
 }
 
-#bouttonConnexion:hover
-{
+#bouttonConnexion:hover {
     background-color: rgb(148, 96, 0);
 }

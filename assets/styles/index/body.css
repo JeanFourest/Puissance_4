@@ -1,0 +1,16 @@
+/* Styles global du texte de la page */
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: rgba(16,14,46,255);
+    margin: 0%;
+    color:  white;
+}
+
+/* Arrière plan du header jusqu'au bouton jouer */
+
+.backgroundNaviguation {
+    background-image: url("../../images/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}

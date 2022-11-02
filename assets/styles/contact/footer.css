@@ -1,26 +1,16 @@
-.footer1
-{
+.footer1 {
     margin-top: 100px;
     padding-top: 50px;
     background-color: rgb(18, 0, 37);
-    /*background-color: lightblue;*/
     display: flex;
     justify-content: space-around;
 }
 
-.information
-{
-    /*background-color: lightgrey;*/
-}
-
-.imageLiens
-{
+.imageLiens {
     display: flex;
     align-items: center;
     height: 40px;
-    /*background-color: aqua;*/
 }
-
 
 .fa {
     padding: 10px;
@@ -34,36 +24,27 @@
     background: #FFA500;
 }
 
-
-
-li
-{
+li {
     margin-top: 20px;
 }
 
-.footerOrange
-{
+.footerOrange {
     color: orange;
 }
 
-.gris
-{
+.gris {
     color: rgb(174, 174, 174);
 }
 
-.gris2
-{
+.gris2 {
     color: rgb(174, 174, 174);
 }
 
-.gris2:hover
-{
+.gris2:hover {
     color: rgb(84, 189, 224);
 }
 
-.copyright
-{
+.copyright {
     color: rgb(174, 174, 174);
     margin-top: 100px;
-    
 }

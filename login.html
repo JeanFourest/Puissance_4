@@ -1,68 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/login/header.css">
-    <link rel="stylesheet" href="assets/login/main.css">
-    <link rel="stylesheet" href="assets/login/footer.css">
-    <title>Login</title>
-</head>
-<body>
-
-    <!-- c'est le header avec les liens vers les autres pages -->
-    <header>
-        <p class="title">The Power Of Memory</p>
-
-        <div class="mesPages">
-            <div class="mesPages2">
-                <a href="" class="accueil">ACCUEIL</a>
-                <a href="" class="jeu">JEU</a>
-                <a href="" class="scores">SCORES</a>
-                <a href="" class="contact">NOUS CONTACTER</a>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="assets/login.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+            <title>Connexion</title>
+        </head>
+        <body>
+            <!--Header avec les liens vers les autres pages-->
+            <header>
+                <p class="title">The Power Of Memory</p>
+                <div class="mesPages">
+                    <div class="mesPages2">
+                        <a href="index.html" class="accueil">ACCUEIL</a>
+                        <a href="memory.html" class="jeu">JEU</a>
+                        <a href="scores.html" class="scores">SCORES</a>
+                        <a href="contact.html" class="contact">NOUS CONTACTER</a>
+                    </div>
+                </div>
+            </header>
+            <div class="texteConnexion">
+                <h2>CONNEXION</h2>
             </div>
-        </div>
-    </header>
-
-    <div class="texteConnexion">
-        <h2>CONNEXION</h2>
-    </div>
-
-    <!-- le formulaire pour se connecter -->
-    <div class="connexion">
-        <form action="">
-            <div class="connexion2">
-                <input type="email" id="email" name="email" placeholder="Email" size="70"><br>
-                <input type="password" id="mdp" name="mdp" placeholder="Mot De Passe" size="70"><br>
-                <input type="submit" id="bouttonConnexion" value="Connexion">
+            <!--Formulaire pour se connecter -->
+            <div class="connexion">
+                <form action="">
+                    <div class="connexion2">
+                        <input type="email" id="email" name="email" placeholder="Email" size="70"><br>
+                        <input type="password" id="mdp" name="mdp" placeholder="Mot De Passe" size="70"><br>
+                        <input type="submit" id="bouttonConnexion" value="Connexion">
+                    </div>
+                </form>
             </div>
-        </form>
-    </div>
-
-    <!-- les informations pour le footer avec les liens -->
-    <footer>
-        <div class="information">
-            <h1>information</h1>
-
-            <p>bruuuuuuuuuuuuuuuuh</p>
-            <p><strong class="footerStrong">Tel :</strong> 06 05 04 03 02</p>
-            <p><strong class="footerStrong">Email :</strong> support@powerofmemory.com</p>
-            <p><strong class="footerStrong">Location :</strong> Paris</p>
-
-        </div>
-        
-        <div class="powerOfMemory">
-            <h1>Power Of Memory</h1>
-
-            <ul>
-                <li class="footerStrong"><a href="" class="gris">Jouer !</a></li>
-                <li class="footerStrong"><a href="" class="gris">Les scores</a></li>
-                <li class="footerStrong"><a href="" class="gris">Nous contacter</a></li>
-            </ul>
-            
-        </div>
-    </footer>
-
-</body>
-</html>
+            <!--Informations pour le footer avec les liens -->
+            <footer>
+                <div class="information">
+                    <h1>information</h1>
+                    <p>bruuuuuuuuuuuuuuuuh</p>
+                    <p><strong class="footerStrong">Tel :</strong> 06 05 04 03 02</p>
+                    <p><strong class="footerStrong">Email :</strong> support@powerofmemory.com</p>
+                    <p><strong class="footerStrong">Location :</strong> Paris</p>
+                </div>
+                <div class="powerOfMemory">
+                    <h1>Power Of Memory</h1>
+                    <ul>
+                        <li class="footerStrong"><a href="memory.html" class="gris">Jouer !</a></li>
+                        <li class="footerStrong"><a href="scores.html" class="gris">Les scores</a></li>
+                        <li class="footerStrong"><a href="contact.html" class="gris">Nous contacter</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </body>
+    </html>
