@@ -1,0 +1,35 @@
+/* Style du footer du chat */
+
+.footer {
+    background-color: white;
+}
+
+.footer form {
+    display: flex;
+}
+
+form input {
+    flex: 0.7;
+    height: 45px;
+    outline: auto;
+    outline-color: rgba(226,225,226,255);
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+::placeholder {
+    padding-left: 10px;
+    color: rgba(225,224,224,255);
+}
+
+form button {
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: -100px;
+    font-weight: bold;
+    font-size: 15px;
+}

@@ -19,7 +19,7 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/assets/Images/background.png");
+    background-image: url("../../images/background.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,15 +31,13 @@ body
     justify-content: center;
 }
 
-.connexion2
-{
+.connexion2 {
     display: flex;
     flex-direction: column;
     
 }
 
-::placeholder
-{
+::placeholder {
     background-color: rgb(58, 31, 86);
 }
 
