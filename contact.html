@@ -1,99 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles/contact/header.css">
-    <link rel="stylesheet" href="assets/styles/contact/main.css">
-    <link rel="stylesheet" href="assets/styles/contact/footer.css">
-    <script src="https://kit.fontawesome.com/306ccec929.js" crossorigin="anonymous"></script>
-    <title>Contact</title>
-</head>
-<body>
-    <!-- c'est le header avec les liens vers les autres pages -->
-    <header>
-        <div class="navigation">
-            <h3>The power of Memory</h3>
-            <nav>
-                <div class="links_nav">
-                    <p><a href="">ACCUEIL</a></p>
-                    <p><a href="">JEU</a></p>
-                    <p><a href="">SCORES</a></p>
-                    <p><a href="">NOUS CONTACTER</a></p>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="assets/contact.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+            <script src="https://kit.fontawesome.com/306ccec929.js" crossorigin="anonymous"></script>
+            <title>Contact</title>
+        </head>
+        <body>
+            <!--Header avec liens vers les autres pages -->
+            <header>
+                <div class="navigation">
+                    <h3>The power of Memory</h3>
+                    <nav>
+                        <div class="links_nav">
+                            <p><a href="">ACCUEIL</a></p>
+                            <p><a href="">JEU</a></p>
+                            <p><a href="">SCORES</a></p>
+                            <p><a href="">NOUS CONTACTER</a></p>
+                        </div>
+                    </nav>
                 </div>
-            </nav>
-        </div>
-    </header>
-
-    <div class="texteContacter">
-        <h2>NOUS CONTACTER</h2>
-    </div>
-    <!-- ici c'est le main avec le formulaire -->
-    <div class="contacter">
-        <div class="boite">
-            <div class="boite2">
-                <i class="fa-solid fa-phone fa-2xl"></i>
-                <p class="paraBoite">06 05 04 03 02</p>
+            </header>
+            <div class="texteContacter">
+                <h2>NOUS CONTACTER</h2>
             </div>
-            <div class="boite2">
-                <i class="fa-solid fa-envelope fa-2xl"></i>
-                <p class="paraBoite">support@powerofmemory.com</p>
+            <!--Main-->
+            <div class="contacter">
+                <div class="boite">
+                    <div class="boite2">
+                        <i class="fa-solid fa-phone fa-2xl"></i>
+                        <p class="paraBoite">06 05 04 03 02</p>
+                    </div>
+                    <div class="boite2">
+                        <i class="fa-solid fa-envelope fa-2xl"></i>
+                        <p class="paraBoite">support@powerofmemory.com</p>
+                    </div>
+                    <div class="boite2">
+                        <i class="fa-solid fa-compass fa-2xl"></i>
+                        <p class="paraBoite">Paris</p>
+                    </div>
+                </div>
             </div>
-            <div class="boite2">
-                <i class="fa-solid fa-compass fa-2xl"></i>
-                <p class="paraBoite">Paris</p>
+            <!--Formulaire-->
+            <div class="formulaire">
+                <form action="">
+                    <div class="fomulaire2">
+                        <input type="text" id="nom" name="nom" placeholder="Nom">
+                        <input type="email" id="email" name="email" placeholder="Email"><br>
+                        <input type="text" id="sujet" name="sujet" placeholder="Sujet"><br>
+                        <textarea name="message" id="message" placeholder="Message"></textarea><br>
+                        <input type="button" id="bouttonformulaire" value="Envoyer">
+                    </div>
+                </form>
             </div>
-        </div>
-    </div>
-    <!-- c'est le formulaire -->
-    <div class="formulaire">
-        <form action="">
-            <div class="fomulaire2">
-                <input type="text" id="nom" name="nom" placeholder="Nom">
-                <input type="email" id="email" name="email" placeholder="Email"><br>
-                <input type="text" id="sujet" name="sujet" placeholder="Sujet"><br>
-                <textarea name="message" id="message" placeholder="Message"></textarea><br>
-                <input type="button" id="bouttonformulaire" value="Envoyer">
+            <!--Footer-->
+            <div class="footer1">
+                <div class="information">
+                    <!--Partie gauche du footer-->
+                    <h1>information</h1>
+                    <!--Liens de la partie gauche-->
+                    <p class="gris">bruuuuuuuuuuuuuuuuh</p>
+                    <p><span class="footerOrange">Tel :</span><span class="gris"> 06 05 04 03 02</span></p>
+                    <p><span class="footerOrange">Email :</span><span class="gris"> support@powerofmemory.com</span></p>
+                    <p><span class="footerOrange">Location :</span><span class="gris"> Paris</span></p>
+                    <div class="imageLiens">
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-twitter"></i></a>
+                        <a href=""><i class="fa fa-google"></i></a>
+                        <a href=""><i class="fa fa-pinterest"></i></a>
+                        <a href=""><i class="fa fa-instagram"></i></a>
+                    </div>
+                    <p class="copyright">Copyright © 2022 Tous droits réservés</p>
+                </div>
+                <!--Partie droite du footer-->
+                <div class="powerOfMemory">
+                    <h1>Power Of Memory</h1>
+                    <!--Liens de la partie droite-->
+                    <ul>
+                        <li class="footerOrange"><a href=""><span class="gris2"> Jouer ! </span></a></li>
+                        <li class="footerOrange"><a href=""><span class="gris2"> Les scores </span></a></li>
+                        <li class="footerOrange"><a href=""><span class="gris2"> Nous contacter </span></a></li>
+                    </ul>
+                </div>
             </div>
-        </form>
-    </div>
-
-    <!-- c'est le footer de la page -->
-
-    <div class="footer1">
-        <div class="information">
-            <!-- footer partie gauche -->
-            <h1>information</h1>
-            <!-- partie a gauche de footer avec les liens -->
-            <p class="gris">bruuuuuuuuuuuuuuuuh</p>
-            <p><span class="footerOrange">Tel :</span><span class="gris"> 06 05 04 03 02</span></p>
-            <p><span class="footerOrange">Email :</span><span class="gris"> support@powerofmemory.com</span></p>
-            <p><span class="footerOrange">Location :</span><span class="gris"> Paris</span></p>
-
-            <div class="imageLiens">
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-google"></i></a>
-                <a href=""><i class="fa fa-pinterest"></i></a>
-                <a href=""><i class="fa fa-instagram"></i></a>
-            </div>
-
-            <p class="copyright">Copyright © 2022 Tous droits réservés</p>
-
-        </div>
-        <!-- footer partie droite -->
-        <div class="powerOfMemory">
-            <h1>Power Of Memory</h1>
-            <!-- partie a droite du footer avec les liens-->
-            <ul>
-                <li class="footerOrange"><a href=""><span class="gris2"> Jouer ! </span></a></li>
-                <li class="footerOrange"><a href=""><span class="gris2"> Les scores </span></a></li>
-                <li class="footerOrange"><a href=""><span class="gris2"> Nous contacter </span></a></li>
-            </ul>
-            
-        </div>
-    </div>
-
-</body>
-</html>
+        </body>
+    </html>

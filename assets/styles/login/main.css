@@ -1,18 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* Style du titre connexion avec le fond */
 
-body
-{
-    font-family: 'Lato', sans-serif;
-    color: white;
-    background-color: rgba(16,14,46,255);
-    margin: 0px;
-}
-
-
-
-/* Style du titre Connexion avec le fond */
-
-.texteConnexion{
+.texteConnexion {
     width: 100%;
     height: 250px;
     margin-top: 25px;
@@ -25,26 +13,22 @@ body
     background-size: cover;
 }
 
-.connexion{
+.connexion {
     margin-top: 100px;
     display: flex;
     justify-content: center;
 }
 
-.connexion2
-{
+.connexion2 {
     display: flex;
     flex-direction: column;
-    
 }
 
-::placeholder
-{
+::placeholder {
     background-color: rgb(58, 31, 86);
 }
 
-#email
-{
+#email {
     background-color: rgb(58, 31, 86);
     border: none;
     padding-left: 20px;
@@ -55,8 +39,7 @@ body
     color: white;
 }
 
-#mdp
-{
+#mdp {
     background-color: rgb(58, 31, 86);
     border: none;
     padding-left: 20px;
@@ -65,11 +48,9 @@ body
     width: 500px;
     height: 40px;
     color: white;
-
 }
 
-#bouttonConnexion
-{
+#bouttonConnexion {
     border: none;
     background-color: orange;
     color: white;
@@ -78,7 +59,6 @@ body
     border-radius: 2px;
 }
 
-#bouttonConnexion:hover
-{
+#bouttonConnexion:hover {
     background-color: darkorange;
 }
