@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* Styles de la partie accueil ainsi que le bouton jouer */
 
 
 
@@ -31,19 +31,19 @@ body{
     margin-top: 10%;
 }
 
-.accrocheTitre{
+.accrocheTitre {
     color : rgba(130,128,153,255);
     text-align: center;
     margin-top: -1.8%;
     font-weight: lighter;
 }
 
-.blocJouer{
+.blocJouer {
     display: flex;
     justify-content: center;
 }
 
-.Jouer{
+.Jouer {
     margin-top: 1%;
     margin-bottom: 13%;
     background-color: rgba(236,145,35,255);
@@ -57,21 +57,19 @@ body{
     text-decoration: none;
 }
 
-.Jouer:hover{
+.Jouer:hover {
     background-color: darkorange;
 }
 
-
-
 /* Style de la partie explication du jeu */
 
-.blocTextsImages{
+.blocTextsImages {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.blocImages{
+.blocImages {
     display: flex;
     flex-direction: row;
     margin-right: 10%;
@@ -79,66 +77,64 @@ body{
     margin-right: -3%;
 }
 
-.imageOrdi{
+.imageOrdi {
     padding-right: 5%;
     width: 500px;
 }
 
-#Images{
+#Images {
     padding-right: 5%;
 }
 
-#numTexte{
+#numTexte {
     color: rgba(55,36,160,255);
     font-size: 200%;
 }
 
-#titreTexte{
+#titreTexte {
     font-size: 90%;
 }
 
-#paragrapheExplicationJeu{
+#paragrapheExplicationJeu {
     color: rgba(130,128,153,255);
     font-weight: lighter;
     font-size: 80%;
 }
 
-
-
 /* Styles de la partie données et joueurs */
 
-.Watchdogs{
+.Watchdogs {
     width: 500px;
     height: 300px;
     border-radius: 2px;
 }
 
-.backgroundDonnees{
+.backgroundDonnees {
     background-color: rgba(17,16,47,255);
 }
 
-.blocImageDonnees{
+.blocImageDonnees {
     display: flex;
     justify-content: center;
     flex-direction: row;
     
 }
 
-.blocJean{
+.blocJean {
     width: 80%;
     display: flex;
     justify-content: flex-start;
 }
 
-.allDonnees{
+.allDonnees {
     width: 90%;
 }
 
-#textBox{
+#textBox {
     font-size: 120%;
 }
 
-.Box1{
+.Box1 {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -146,7 +142,7 @@ body{
     font-size: 15px;
 }
 
-.Bloc1{
+.Bloc1 {
     background-color: rgba(55,36,160,255);
     border-radius: 2px;
     padding-left: 45px;
@@ -155,7 +151,7 @@ body{
     padding-bottom: 15px;
 }
 
-.Bloc2{
+.Bloc2 {
     background-color: rgba(24,161,95,255);
     border-radius: 2px;
     padding-left: 40px;
@@ -166,14 +162,14 @@ body{
 
 }
 
-.Box2{
+.Box2 {
     display: flex;
     justify-content: center;
     text-align: center;
     font-size: 15px;
 }
 
-.Bloc3{
+.Bloc3 {
     background-color: rgba(185,28,168,255);
     border-radius: 2px;
     padding-left: 40px;
@@ -182,7 +178,7 @@ body{
     padding-bottom: 15px;
 }
 
-.Bloc4{
+.Bloc4 {
     background-color: rgba(236,145,35,255);
     border-radius: 2px;
     padding-left: 40px;
@@ -192,29 +188,27 @@ body{
     margin-left: 9%;
 }
 
+/* Style de la partie infos sur les créateurs */
 
-
-/* Style de la partie Infos sur les Créateurs */
-
-.team{
+.team {
     text-align: center;
     font-size: 40px;
 }
 
-.accrocheTeam{
+.accrocheTeam {
     text-align: center;
     margin-top: -2%;
     color: rgba(130,128,153,255);
 }
 
-.blocCreateurs{
+.blocCreateurs {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin-top: 8%;
 }
 
-#Createurs{
+#Createurs {
     background-color: rgba(13,11,38,255);
     padding-top: 30px;
     padding-bottom: 30px;
@@ -222,18 +216,18 @@ body{
     padding-right: 70px;
 }
 
-#nomsTeam{
+#nomsTeam {
     text-align: center;
     font-size: 110%;
 }
 
-#textJob{
+#textJob {
     text-align: center;
     color: rgba(130,128,153,255);
     font-size: 90%;
 }
 
-#Pdp{
+#Pdp {
     border-radius: 100px;
     width: 130px;
 }
@@ -262,15 +256,15 @@ body{
 
 /* Style de la partie infomartions et contacts */
 
-.backgroundInfosContact{
+.backgroundInfosContact {
     background-color: rgba(13,11,38,255);
 }
 
-.informations{
+.informations {
     display: flex;
     justify-content: space-around;
 }
 
-strong{
+strong {
     color: #FFA500;
 }
