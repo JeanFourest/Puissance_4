@@ -1,31 +1,6 @@
 /* Styles de la partie accueil ainsi que le bouton jouer */
 
-
-
-/* Styles global du texte de la page */
-
-body{
-    font-family: 'Lato', sans-serif;
-    background-color: rgba(16,14,46,255);
-    margin: 0%;
-    color:  white;
-}
-
-
-
-/* Arrière plan du header jusqu'au bouton Jouer */
-
-.backgroundNaviguation{
-    background-image: url("/assets/Images/background.png");
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
-
-/* Styles de la partie accueil Bienvenue ainsi que le bouton Jouer */
-
-.titreAccueil{
+.titreAccueil {
     text-align: center;
     font-size: 400%;
     margin-top: 10%;
