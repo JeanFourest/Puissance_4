@@ -10,28 +10,33 @@
     justify-content: space-around;
 }
 
-/* Lien non visité */
+
+
+
+
+/* unvisited link */
 a:link {
     color: white;
     text-decoration: none;
-}
+  }
   
-/* Lien visité */
+/* visited link */
 a:visited {
     color: white;
     text-decoration: none;
 
 }
   
-/* Souris sur le lien */
+/* mouse over link */
 a:hover {
     color: rgb(84, 189, 224);
     text-decoration: none;
 
 }
   
-/* Lien sélectionné */
+/* selected link */
 a:active {
     color: white;
     text-decoration: none;
+
 }
