@@ -25,4 +25,12 @@ SELECT * FROM utilisateur WHERE email = "jm2@gmail.com" AND password = "new pass
 
 /*STORY 5*/
 INSERT INTO jeu (gameName)
-VALUES ("The Power Of Memory")
+VALUES ("The Power Of Memory");
+
+
+
+/*STORY 6*/
+SELECT gameName, name, difficulty, gameScore
+FROM jeu INNER JOIN score INNER JOIN utilisateur
+ON score.idGame = jeu.id AND score.idPlayer = utilisateur.id
+
