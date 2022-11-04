@@ -47,9 +47,13 @@
 .blocImages {
     display: flex;
     flex-direction: row;
-    margin-right: 10%;
-    margin-top: 3%;
-    margin-right: -3%;
+    padding: 0 150px 0 0;
+}
+
+.blocImages img {
+    width: auto;
+    height: 300px;
+    margin: 30px 30px;
 }
 
 .imageOrdi {
