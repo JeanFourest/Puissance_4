@@ -46,9 +46,11 @@ ON score.idGame = jeu.id AND score.idPlayer = utilisateur.id
 ORDER BY jeu.gameName; /*ou on peut mettre score.difficulty; ou score.gameScore;*/
 
 
+/*DTORY 8*/
+
 
 
 /*STORY 10*/
 SELECT message.message,message.idExpediteur, message.dateMessage
 FROM message
-WHERE message.dateMessage >= NOW() - INTERVAL 1 DAY
+WHERE message.dateMessage >= NOW() - INTERVAL 1 DAY;
