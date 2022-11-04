@@ -5,13 +5,12 @@ VALUES ("jm@gmail.com", "ABCD", "PapyBruh", "2022-10-10");
 
 
 
-/*STORY 3-1*/
+/*STORY 3*/
 
 UPDATE utilisateur
 SET password = "new password"
 WHERE id = 1;
 
-/*STORY 3-2*/
 UPDATE utilisateur
 SET email = "jm2@gmail.com"
 WHERE id = 1 AND password = "new password";
@@ -48,6 +47,11 @@ ORDER BY jeu.gameName; /*ou on peut mettre score.difficulty; ou score.gameScore;
 
 /*STORY 8*/
 
+
+
+/*STORY 9*/
+INSERT INTO message (idGame,idExpediteur,message)
+VALUES (1,1,"just testing")
 
 
 
