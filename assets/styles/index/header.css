@@ -6,20 +6,18 @@ header {
     color: white;
 }
 
-.title {
-    margin-right: 10%;
-    font-size: large;
-    margin-top: 2%;
-}
-
-.links {
+.navigation {
+    padding: 20px 0 0 0;
     display: flex;
-    align-self: center;
-    margin-left: 25%;
+    justify-content: space-around;
 }
 
-.links2 {
-    margin-top: 3%;
+.links_nav {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 0 0 600px;
+    margin: 15px 0 0 0;
 }
 
 #lien {
@@ -43,7 +41,7 @@ a:visited {
 /* Souris sur le lien */
 
 a:hover {
-    color: aqua;
+    color: rgb(84, 189, 224);
     text-decoration: none;
 }
 
