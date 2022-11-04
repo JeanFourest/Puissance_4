@@ -6,6 +6,7 @@ VALUES ("jm@gmail.com", "ABCD", "PapyBruh", "2022-10-10");
 
 
 /*STORY 3-1*/
+
 UPDATE utilisateur
 SET password = "new password"
 WHERE id = 1;
@@ -33,4 +34,18 @@ VALUES ("The Power Of Memory");
 SELECT gameName, name, difficulty, gameScore
 FROM jeu INNER JOIN score INNER JOIN utilisateur
 ON score.idGame = jeu.id AND score.idPlayer = utilisateur.id
+ORDER BY jeu.gameName, score.difficulty, score.gameScore;
 
+
+
+
+/*STORY 7  */
+SELECT gameName, name, difficulty, gameScore
+FROM jeu INNER JOIN score INNER JOIN utilisateur
+ON score.idGame = jeu.id AND score.idPlayer = utilisateur.id
+
+ORDER BY jeu.gameName; /*ou on peut mettre score.difficulty; ou score.gameScore;*/
+
+
+
+/*STORY 8*/
