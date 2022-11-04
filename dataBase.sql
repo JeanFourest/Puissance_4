@@ -43,9 +43,12 @@ ORDER BY jeu.gameName, score.difficulty, score.gameScore;
 SELECT gameName, name, difficulty, gameScore
 FROM jeu INNER JOIN score INNER JOIN utilisateur
 ON score.idGame = jeu.id AND score.idPlayer = utilisateur.id
-
 ORDER BY jeu.gameName; /*ou on peut mettre score.difficulty; ou score.gameScore;*/
 
 
 
-/*STORY 8*/
+
+/*STORY 10*/
+SELECT message.message,message.idPMessage, message.dateMessage
+FROM message
+WHERE message.dateMessage >= NOW() - INTERVAL 1 DAY
