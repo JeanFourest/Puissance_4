@@ -46,7 +46,8 @@ ON score.idGame = jeu.id AND score.idPlayer = utilisateur.id
 ORDER BY jeu.gameName; /*ou on peut mettre score.difficulty; ou score.gameScore;*/
 
 
-/*DTORY 8*/
+/*STORY 8*/
+
 
 
 
