@@ -49,6 +49,6 @@ ORDER BY jeu.gameName; /*ou on peut mettre score.difficulty; ou score.gameScore;
 
 
 /*STORY 10*/
-SELECT message.message,message.idPMessage, message.dateMessage
+SELECT message.message,message.idExpediteur, message.dateMessage
 FROM message
 WHERE message.dateMessage >= NOW() - INTERVAL 1 DAY
