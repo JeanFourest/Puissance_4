@@ -46,10 +46,12 @@ ORDER BY jeu.gameName; /*ou on peut mettre score.difficulty; ou score.gameScore;
 
 
 /*STORY 8 si il y a un doublon, il faudra le supprimer*/
-SELECT idGame, COUNT(idGame), difficulty, COUNT(difficulty)
-FROM score
-GROUP BY idGame, difficulty
-HAVING COUNT(idGame) > 1 AND COUNT(difficulty) >1;
+UPDATE score 
+SET gameScore = "400"
+WHERE identifiant = idPlayer
+
+INSERT INTO score (idPlayer, idGame, difficulty, gameScore, dateGame) 
+VALUES (1, 1, "Facile", 360, NOW());
 
 
 /*STORY 9 envoyer un message sur le chat général de mon site*/
