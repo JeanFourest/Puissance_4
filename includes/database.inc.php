@@ -1,9 +1,9 @@
 <?php
-
+//On se connecte a la base de donnee
 try{
 
 $BDD = new PDO(
-    'mysql:host=localhost;dbname=memorygame;charset=utf8',
+    'mysql:host=localhost:8889;dbname=memorygame;charset=utf8',
     'root',
     'root'
 );
@@ -14,13 +14,13 @@ catch(Exception $e)
 }
 
 
-// On récupère tout le contenu de la table recipes
+// On récupère tout le contenu de la table
 $sqlQuery = 'SELECT * FROM jeu';
 $statement = $BDD->prepare($sqlQuery);
 $statement->execute();
 $resultats = $statement->fetchAll();
 
-// On affiche chaque recette une à une
+// On affiche les requetes ici
 foreach ($resultats as $resultat) {
 ?>
     <p><?php echo $resultat['gameName']; ?></p>
