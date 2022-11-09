@@ -1,29 +1,15 @@
 <?php
+//on utilisera ce fichier pour include toute les autres page
 //On se connecte a la base de donnee
-try{
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "memoryGame";
 
-$BDD = new PDO(
-    'mysql:host=localhost:8889;dbname=memorygame;charset=utf8',
-    'root',
-    'root'
-);
-}
-catch(Exception $e)
-{
-    die('Erreur : ' . $e->getMessage());
-}
-
-
-// On récupère tout le contenu de la table
-$sqlQuery = 'SELECT * FROM jeu';
-$demande = $BDD->prepare($sqlQuery);
-$demande->execute();
-$resultats = $demande->fetchAll();
-
-// On affiche les requetes ici
-foreach ($resultats as $resultat) {
-?>
-    <p><?php echo $resultat['gameName']; ?></p>
-<?php
+// cree connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 ?>
