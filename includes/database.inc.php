@@ -16,9 +16,9 @@ catch(Exception $e)
 
 // On récupère tout le contenu de la table
 $sqlQuery = 'SELECT * FROM jeu';
-$statement = $BDD->prepare($sqlQuery);
-$statement->execute();
-$resultats = $statement->fetchAll();
+$demande = $BDD->prepare($sqlQuery);
+$demande->execute();
+$resultats = $demande->fetchAll();
 
 // On affiche les requetes ici
 foreach ($resultats as $resultat) {
