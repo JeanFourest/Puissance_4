@@ -1,0 +1,123 @@
+/* Style global de la page */
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    background-color: rgba(19,15,45,255);
+    margin: 0px;
+}
+
+.texteContacter {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/Images/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contacter {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.boite {
+    display: flex;
+    justify-content: space-between;
+    width: 950px;
+}
+
+.boite2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(13,11,38,255);
+    width: 300px;
+    height: 200px;
+}
+
+.paraBoite {
+    margin-top: 40px;
+}
+
+.formulaire {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.fomulaire2 {
+    width: 100%;
+    height: 280px;
+    margin-right: 440px;
+}
+
+#nom {
+    background-color: rgba(39,38,69,255);
+    border: none;
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 2px;
+    width: 200px;
+    height: 40px;
+    color: white;
+}
+
+#email {
+    background-color: rgba(39,38,69,255);
+    border: none;
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 2px;
+    width: 200px;
+    height: 40px;
+    color: white;
+}
+
+#sujet {
+    background-color: rgba(39,38,69,255);
+    border: none;
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 2px;
+    width: 464px;
+    height: 40px;
+    color: white;
+}
+
+#message {
+    background-color: rgba(39,38,69,255);
+    border: none;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 2px;
+    width: 464px;
+    height: 100px;
+    color: white;
+}
+
+#bouttonformulaire {
+    border: none;
+    background-color: orange;
+    color: white;
+    margin: 10px;
+    width: 100px;
+    height: 50px;
+    border-radius: 2px;
+}
+
+#bouttonformulaire:hover {
+    background-color: rgb(148, 96, 0);
+}

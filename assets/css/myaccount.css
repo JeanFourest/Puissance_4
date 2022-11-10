@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    background-color: rgba(19,15,45,255);
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+#titreAccount {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/Images/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.change_info {
+    padding: 15px 0 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.required_answer {
+    background-color: rgba(39,38,69,255);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 15px 15px 15px 15px;
+}
+
+.submit {
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 15px 15px 15px 15px;
+    margin: auto;
+}
+
+.space_out_section {
+    padding: 100px 0 0 0;
+}

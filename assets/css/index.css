@@ -1,0 +1,226 @@
+/* Styles global du texte de la page */
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: rgba(19,15,45,255);
+    margin: 0%;
+    color:  white;
+}
+
+/* Arrière plan du header jusqu'au bouton jouer */
+
+.backgroundNaviguation {
+    background-image: url("/assets/Images/background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Styles de la partie accueil ainsi que le bouton jouer */
+
+.titreAccueil {
+    text-align: center;
+    font-size: 400%;
+    margin-top: 10%;
+}
+
+.accrocheTitre {
+    color : rgba(130,128,153,255);
+    text-align: center;
+    margin-top: -1.8%;
+    font-weight: lighter;
+}
+
+.blocJouer {
+    display: flex;
+    justify-content: center;
+}
+
+.Jouer {
+    margin-top: 1%;
+    margin-bottom: 13%;
+    background-color: rgba(236,145,35,255);
+    color: white;
+    width: 10%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    display: flex;
+    justify-content: center;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.Jouer:hover {
+    background-color: darkorange;
+}
+
+/* Style de la partie explication du jeu */
+
+.blocTextsImages {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blocImages {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10%;
+    margin-top: 3%;
+    margin-right: -3%;
+}
+
+.imageOrdi {
+    padding-right: 5%;
+    width: 500px;
+}
+
+#Images {
+    padding-right: 5%;
+}
+
+#numTexte {
+    color: rgba(55,36,160,255);
+    font-size: 200%;
+}
+
+#titreTexte {
+    font-size: 90%;
+}
+
+#paragrapheExplicationJeu {
+    color: rgba(130,128,153,255);
+    font-weight: lighter;
+    font-size: 80%;
+}
+
+/* Styles de la partie données et joueurs */
+
+.Watchdogs {
+    width: 500px;
+    height: 300px;
+    border-radius: 2px;
+}
+
+.backgroundDonnees {
+    background-color: rgba(17,16,47,255);
+}
+
+.blocImageDonnees {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+
+.blocJean {
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.allDonnees {
+    width: 90%;
+}
+
+#textBox {
+    font-size: 120%;
+}
+
+.Box1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 9%;
+    font-size: 15px;
+}
+
+.Bloc1 {
+    background-color: rgba(55,36,160,255);
+    border-radius: 2px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.Bloc2 {
+    background-color: rgba(24,161,95,255);
+    border-radius: 2px;
+    padding-left: 40px;
+    padding-right: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 9%;
+
+}
+
+.Box2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+}
+
+.Bloc3 {
+    background-color: rgba(185,28,168,255);
+    border-radius: 2px;
+    padding-left: 40px;
+    padding-right: 37px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.Bloc4 {
+    background-color: rgba(236,145,35,255);
+    border-radius: 2px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 9%;
+}
+
+/* Style de la partie infos sur les créateurs */
+
+.team {
+    text-align: center;
+    font-size: 40px;
+}
+
+.accrocheTeam {
+    text-align: center;
+    margin-top: -1.5%;
+    color: rgba(130,128,153,255);
+}
+
+.blocCreateurs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 8%;
+}
+
+#Createurs {
+    background-color: rgba(13,11,38,255);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+#nomsTeam {
+    text-align: center;
+    font-size: 110%;
+}
+
+#textJob {
+    text-align: center;
+    color: rgba(130,128,153,255);
+    font-size: 90%;
+}
+
+#Pdp {
+    border-radius: 100px;
+    width: 130px;
+}
