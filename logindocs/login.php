@@ -23,11 +23,14 @@ include "database.inc.php";
             //verifie si le mot de passe saisie est egale ou superieure a 8 charateres et verifie aussi si le mail saisie est un vrai
             if(strlen($motDePasse) >= 8 && filter_var($email, FILTER_VALIDATE_EMAIL)){
                 
-                $demande = $conn;
-                foreach($demande->query("SELECT * FROM utilisateur where id = 1") as $row){
-                echo $row['name'] . "<br>";
-                $nom = $row['name'];
-                echo $nom;
+                $demande = $conn->prepare("SELECT * FROM utilisateur WHERE email = ?");
+                $test = "jm2@gmail.com";
+
+                $demande->bindParam(1, $test);
+                $demande->execute();
+
+                while($row = $demande->fetch()){
+                    echo $row["email"];
                 }
                 
             }else{
