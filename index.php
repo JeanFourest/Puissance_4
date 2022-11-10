@@ -130,25 +130,25 @@
                         <img src="assets/Images/pdpHywel.jpeg" alt="Photo de profil Hywel" id="Pdp">
                         <p id="nomsTeam">Hywel</p>
                         <p id="textJob">Game Developer</p>
-                        <a href="">Facebook</a>
-                        <a href="">Discord</a>
-                        <a href="">Instagram</a>
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-discord"></i></a>
+                        <a href=""><i class="fa fa-instagram"></i></a>
                     </div>
                     <div id="Createurs">
                         <img src="assets/Images/pdpJean.png" alt="Photo de profil Jean" id="Pdp">
                         <p id="nomsTeam" >Jean</p>
                         <p id="textJob">Game Developer</p>
-                        <a href="">Facebook</a>
-                        <a href="">Discord</a>
-                        <a href="">Instagram</a>
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-discord"></i></a>
+                        <a href=""><i class="fa fa-instagram"></i></a>
                     </div>
                     <div id="Createurs">
                         <img src="assets/Images/pdpAlex.jpeg" alt="Photo de profil Alexandre" id="Pdp">
                         <p id="nomsTeam">Alexandre</p>
                         <p id="textJob">Game Developer</p>
-                        <a href="">Facebook</a>
-                        <a href="">Discord</a>
-                        <a href="">Instagram</a>
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-discord"></i></a>
+                        <a href=""><i class="fa fa-instagram"></i></a>
                     </div>
                 </div>
             </div>

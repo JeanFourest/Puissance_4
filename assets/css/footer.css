@@ -30,8 +30,8 @@
     border-radius: 2px;
 }
 
-.fa-twitter, .fa-facebook, .fa-google, .fa-pinterest, .fa-instagram {
-    background: #FFA500;
+.fa-twitter, .fa-facebook, .fa-google, .fa-pinterest, .fa-instagram, .fa-discord {
+    background: orange;
 }
 
 .copyright {
