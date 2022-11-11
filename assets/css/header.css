@@ -1,0 +1,41 @@
+.navigation {
+    padding: 10px 0 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+
+.links_nav {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 6px;
+}
+
+/* Lien non visité */
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+  
+/* Lien visité */
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+  
+/* Souris sur le lien */
+
+a:hover {
+    color: aqua;
+    text-decoration: none;
+}
+  
+/* Lien sélectionné */
+
+a:active {
+    color: white;
+    text-decoration: none;
+}

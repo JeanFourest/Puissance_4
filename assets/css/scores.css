@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    background-color: rgba(19,15,45,255);
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+#titreScores {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/Images/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.score {
+    margin-top: 100px;
+    width: 100%;
+}
+
+th, td {
+    padding: 20px;
+}
+
+th {
+    border: 3px solid rgb(127, 85, 161);
+    border-radius: 10px;
+    background-color: rgb(87, 48, 119);
+}
+
+tr ,td {
+    border: 3px solid rgb(72, 16, 117);
+    border-radius: 10px;
+}
