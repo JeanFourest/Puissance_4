@@ -68,7 +68,7 @@ include "includes/database.inc.php";
                             } else{
                                 //en cas d'erreur on envoie un message a l'utilisateur
                                 ?>
-                                <p class="erreur">Email ou mot de passe invalide</p>
+                                <p>Email ou mot de passe invalide</p>
                                 <?php
                             }
 
@@ -77,7 +77,7 @@ include "includes/database.inc.php";
 
                             //en cas d'erreur on envoie un message a l'utilisateur
                             ?>
-                            <p class="erreur">Email ou mot de passe invalide</p>
+                            <p>Email ou mot de passe invalide</p>
                             <?php
                         }
                     }
