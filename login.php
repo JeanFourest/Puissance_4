@@ -1,3 +1,10 @@
+<!-- Lien vers le BDD du fichier database.inc.php -->
+
+<?php
+session_start();
+include "includes/database.inc.php";
+?>
+
 <!DOCTYPE html>
     <html lang="en">
         <head>
@@ -16,8 +23,6 @@
         <body>
 
             <?php
-
-                // include 'Includes/database.inc.php';
 
                 // Importation du header
 
