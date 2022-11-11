@@ -23,15 +23,20 @@ include "database.inc.php";
             //verifie si le mot de passe saisie est egale ou superieure a 8 charateres et verifie aussi si le mail saisie est un vrai
             if(strlen($motDePasse) >= 8 && filter_var($email, FILTER_VALIDATE_EMAIL)){
                 
-                $demande = $conn->prepare("SELECT * FROM utilisateur WHERE email = ?");
-                $test = "jm2@gmail.com";
-
-                $demande->bindParam(1, $test);
+                //prepare les commandes pour l'etape suivant
+                $demande = $conn->prepare("SELECT * FROM utilisateur WHERE email = ? AND password = ?");
+                $demande->bindParam(1, $email);
+                $demande->bindParam(2, $motDePasse);
                 $demande->execute();
 
-                while($row = $demande->fetch()){
-                    echo $row["email"];
+                //enregistre l'id de l'utilisateur dans $_SESSION
+                if($row = $demande->fetch()){
+                    $_SESSION["user_id"] = $row["id"];
+                    
+                } else{
+                    echo "il y a eu une erreur";
                 }
+
                 
             }else{
 
