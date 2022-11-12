@@ -63,14 +63,22 @@ include "includes/database.inc.php";
                         <input type="submit" id="bouttonformulaire" name="button" value="Envoyer">
 
                         <?php
+                            //si le bouton a ete appuyer, 
+                            //les informations du formulaire seront enregistrer dans des variables
                             if(isset($_POST["button"])){
                                 $nom = $_POST["nom"];
                                 $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
                                 $sujet = $_POST["sujet"];
                                 $message = $_POST["message"];
 
-                                if(strlen($nom))
-                                
+                                //verifie si les conditions sont correcte et si les informations sont bon, il renvoie un message
+                                if(strlen($nom) > 0 && filter_var($email, FILTER_VALIDATE_EMAIL) && strlen($sujet) > 0 && strlen($message) >= 15){
+                                    echo "Le formulaire a bien ete envoyer :)";
+
+                                //sinon il demande de verifier le formulaire
+                                }else{
+                                    echo "Veuillez vérifier le formulaire";
+                                }
                             }
                         ?>
 
