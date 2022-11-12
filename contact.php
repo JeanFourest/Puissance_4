@@ -54,16 +54,32 @@ include "includes/database.inc.php";
             </div>
             <!--Formulaire-->
             <div class="formulaire">
-                <form action="">
+                <form method="POST">
                     <div class="fomulaire2">
                         <input type="text" id="nom" name="nom" placeholder="Nom">
                         <input type="email" id="email" name="email" placeholder="Email"><br>
                         <input type="text" id="sujet" name="sujet" placeholder="Sujet"><br>
                         <textarea name="message" id="message" placeholder="Message"></textarea><br>
-                        <input type="button" id="bouttonformulaire" value="Envoyer">
+                        <input type="submit" id="bouttonformulaire" name="button" value="Envoyer">
+
+                        <?php
+                            if(isset($_POST["button"])){
+                                $nom = $_POST["nom"];
+                                $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+                                $sujet = $_POST["sujet"];
+                                $message = $_POST["message"];
+
+                                if(strlen($nom))
+                                
+                            }
+                        ?>
+
                     </div>
                 </form>
             </div>
+
+
+        
 
             <!-- Importation du footer -->
 
