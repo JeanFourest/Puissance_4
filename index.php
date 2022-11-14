@@ -1,7 +1,6 @@
 <!-- Lien vers le BDD du fichier database.inc.php -->
 
 <?php
-session_start();
 include "includes/database.inc.php";
 ?>
 

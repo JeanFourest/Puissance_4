@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 //on utilisera ce fichier pour include toute les autres page
 //On se connecte a la base de donnee
 $servername = "localhost";
