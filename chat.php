@@ -1,9 +1,5 @@
 <!-- Lien vers le BDD du fichier database.inc.php -->
 
-<?php
-session_start();
-include "includes/database.inc.php";
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -76,10 +72,29 @@ include "includes/database.inc.php";
 
         <!-- Le footer de la fenêtre de Chat-->
         <div class="footer">
-            <form>
-                <input type="text" name="" placeholder="Votre message..." class="input">
-                <button>Envoyer</button>
+            <form method="POST">
+                <textarea type="text" name="message" placeholder="Votre message..." id="message"></textarea>
+                <button type="submit" name="valider">Envoyer</button>
             </form>
+            <?php
+                $bdd = new PDO('mysql:host=localhost;dbname=memorygame;charset=utf8;', 'root', 'root');
+
+                if(isset($_POST['valider'])){
+                    if(!empty($_POST['message'])){
+                        $message = nl2br(htmlspecialchars($_POST['message']));
+
+                        $insererMessage = $bdd -> prepare('INSERT INTO message(idGame, idExpediteur, message) VALUES (1, 2, ?)');
+
+                        $insererMessage -> bindParam(1, $message);
+                        $insererMessage -> execute();
+                    }
+                    else{
+                        echo "Veuillez écrire un message avant de vouloir l'envoyer";
+                    }
+                }
+            ?>
+
+            <section id="messages"></section>
         </div>
     </div>
 </body>
