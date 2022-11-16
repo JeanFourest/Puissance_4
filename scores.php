@@ -43,13 +43,25 @@ include "includes/database.inc.php";
                         <th>Score</th>
                         <th>Date</th>
                     </tr>
-                    <tr>
-                        <td>Memory</td>
-                        <td>ILikePizza</td>
-                        <td>Difficile</td>
-                        <td>2048</td>
-                        <td>25/09/2110</td>
-                    </tr>
+
+                    <?php
+                        $demande = $conn->prepare("SELECT jeu.gameName, utilisateur.name, score.difficulty, score.gameScore, score.dateGame
+                            FROM jeu INNER JOIN score INNER JOIN utilisateur
+                            ON score.idGame = jeu.id AND score.idPlayer = utilisateur.id
+                            ORDER BY score.gameScore;"
+                        );
+
+                        $demande->execute();
+                        
+                        $resultats = $demande->fetchAll();
+
+                        foreach($resultats as $row){
+                            echo "<tr>" . "<td>" . $row["0"] . "</td>" . "<td>" . $row["1"] . "</td>" . "<td>" . $row["2"] . "</td>" . "<td>" . $row["3"] . "</td>" . "<td>" . $row["4"] . "</td>" . "</tr>";
+                        }
+                    
+
+                    ?>
+
                 </table>
             </div>
 
