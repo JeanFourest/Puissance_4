@@ -93,24 +93,35 @@ include "includes/database.inc.php";
                         <div>
                             <img class="Watchdogs" src="assets/Images/img-donnee.jpeg" alt="Image WatchDogs qui va avec les données">
                         </div>
+
+                        <?php
+                            $responsePartiesJouees = $conn -> query('SELECT COUNT(id) FROM score;');
+                            $donneePartieJouees = $responsePartiesJouees -> fetch();
+
+                            $responseTempsRecord = $conn -> query('SELECT MIN(gameScore) FROM score;');
+                            $donneeTempsRecord = $responseTempsRecord -> fetch();
+
+                            $responseJoueursInscrits = $conn -> query('SELECT COUNT(idPlayer) FROM score;');
+                            $donneeJoueursInscrits = $responseJoueursInscrits -> fetch();
+                        ?>
                         <div class="allDonnees">
                             <div class="Box1">
                                 <div class="Bloc1">
-                                    <p id="textBox">310</p>
+                                    <p id="textBox"><?php echo $donneePartieJouees['COUNT(id)'];?></p>
                                     <p>Parties Jouées</p>
                                 </div>
                                 <div class="Bloc2">
-                                    <p id="textBox">10 sec</p>
+                                    <p id="textBox"><?php echo $donneeTempsRecord['MIN(gameScore)'];?> sec</p>
                                     <p>Temps Record</p>
                                 </div>
                             </div>
                             <div class="Box2">
                                 <div class="Bloc3">
-                                    <p id="textBox">1020</p>
+                                    <p id="textBox">XXXX</p>
                                     <p>Joueurs Connectés</p>
                                 </div>
                                 <div class="Bloc4">
-                                    <p id="textBox">21 300</p>
+                                    <p id="textBox"><?php echo $donneeJoueursInscrits['COUNT(idPlayer)'];?></p>
                                     <p>Joueurs Inscrits</p>
                                 </div>
                             </div>

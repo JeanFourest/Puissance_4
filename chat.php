@@ -43,8 +43,8 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td><img src="assets/Images/pdpChat.png" alt="Photo de profil utilisateur" class="pdpUser"></td>
-                    <td class="messageRecu" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sapiente cum, ducimus ipsam itaque adipisci animi omnis obcaecati error praesentium in culpa consequatur sed harum inventore vitae incidunt, alias quo!</td>
+                    <td><img src="assets/Images/pdpHywel.jpeg" alt="Photo de profil utilisateur" class="pdpUser"></td>
+                    <td colspan = "" class="messageRecu" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sapiente cum, ducimus ipsam itaque adipisci animi omnis obcaecati error praesentium in culpa consequatur sed harum inventore vitae incidunt, alias quo!</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -58,15 +58,53 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td><img src="assets/Images/pdpChat.png" alt="Photo de profil utilisateur" class="pdpUser"></td>
-                    <td class="messageRecu" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                    <td><img src="assets/Images/pdpJean.png" alt="Photo de profil utilisateur" class="pdpUser"></td>
+                    <td colspan = "" class="messageRecu" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td id="date">Aujourd'hui à 19h38</td>
                     <td></td>
-                </tr>              
+                </tr>
+                
+                <?php
+                    $bdd = new PDO('mysql:host=localhost;dbname=memorygame;charset=utf8;', 'root', 'root');
+
+                    $_SESSION["user_id"] = 1;
+                    $monID = $_SESSION["user_id"];
+
+                    /*$_SESSION["user_id2"] = 2;
+                    $autreID = $_SESSION["user_id2"];
+
+                    //$nomExpediteur = $bdd
+    
+                    if($monID != 1){
+                        $nomExpediteur = $bdd -> prepare('SELECT name FROM utilisateur WHERE id = $autreID');
+                        $nomExpediteur -> execute();
+                        $wtfVariable = "Premier test";
+                        echo "<tr> <td></td> <td id = 'nameUser'>" . $autreID . "</td> <td></td> </tr>";
+                        echo "<tr> <td><img src='assets/Images/pdpJean.png' alt='Photo de profil utilisateur' class='pdpUser'></td> <td class='messageRecu'>" . $wtfVariable . "</td> <td></td> </tr>";
+                        echo "<tr> <td></td> <td></td> <td></td> </tr>";
+                    }
+                    else{
+                        $wtfVariable2 = "Deuxieme test ";
+                        echo "<tr><td></td> <td id = 'nameUser'>" . $monID . "</td> <td class='messageRecu'>" . $wtfVariable2 . "</td> </tr>";
+                    }*/
+    
+                    if(isset($_POST['valider'])){
+                        if(!empty($_POST['message'])){
+                            $message = nl2br(htmlspecialchars($_POST['message']));
+
+                            $insererMessage = $bdd -> prepare('INSERT INTO message(idGame, idExpediteur, message) VALUES (1, 2, ?)');
+                            $insererMessage -> bindParam(1, $message);
+                            $insererMessage -> execute();
+                        }
+                        else{
+                            echo "Veuillez écrire un message avant de vouloir l'envoyer !";
+                        }
+                    }
+                ?>
             </table>
         </div>
 
@@ -77,21 +115,6 @@
                 <button type="submit" name="valider">Envoyer</button>
             </form>
             <?php
-                $bdd = new PDO('mysql:host=localhost;dbname=memorygame;charset=utf8;', 'root', 'root');
-
-                if(isset($_POST['valider'])){
-                    if(!empty($_POST['message'])){
-                        $message = nl2br(htmlspecialchars($_POST['message']));
-
-                        $insererMessage = $bdd -> prepare('INSERT INTO message(idGame, idExpediteur, message) VALUES (1, 2, ?)');
-
-                        $insererMessage -> bindParam(1, $message);
-                        $insererMessage -> execute();
-                    }
-                    else{
-                        echo "Veuillez écrire un message avant de vouloir l'envoyer";
-                    }
-                }
             ?>
 
             <section id="messages"></section>
