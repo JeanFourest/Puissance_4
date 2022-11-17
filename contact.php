@@ -31,7 +31,7 @@ include "includes/database.inc.php";
 
             ?>
 
-            <div class="texteContacter">
+            <div id="texteContacter">
                 <h2>NOUS CONTACTER</h2>
             </div>
             <!--Main-->

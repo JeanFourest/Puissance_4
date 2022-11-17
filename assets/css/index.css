@@ -9,7 +9,7 @@ body {
 
 /* Arrière plan du header jusqu'au bouton jouer */
 
-.backgroundNaviguation {
+#backgroundNaviguation {
     background-image: url("/assets/Images/background.png");
     background-position: center;
     background-size: cover;
