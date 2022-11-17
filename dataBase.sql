@@ -30,16 +30,17 @@ VALUES ("The Power Of Memory");
 
 
 /*STORY 6 afficher les scores de mes utilisateurs*/
-SELECT gameName, name, difficulty, gameScore
+SELECT jeu.gameName, utilisateur.name, score.difficulty, score.gameScore, score.dateGame
 FROM jeu INNER JOIN score INNER JOIN utilisateur
 ON score.idGame = jeu.id AND score.idPlayer = utilisateur.id
-ORDER BY jeu.gameName, score.difficulty, score.gameScore;
+ORDER BY jeu.gameName;
+
 
 
 
 
 /*STORY 7 afficher les scores de mes utilisateurs avec des filtres*/
-SELECT gameName, name, difficulty, gameScore
+SELECT gameName, name, difficulty, gameScore, dateGame
 FROM jeu INNER JOIN score INNER JOIN utilisateur
 ON score.idGame = jeu.id AND score.idPlayer = utilisateur.id
 ORDER BY jeu.gameName; /*ou on peut mettre score.difficulty; ou score.gameScore;*/
