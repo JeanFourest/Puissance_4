@@ -94,6 +94,7 @@ include "includes/database.inc.php";
                             <img class="Watchdogs" src="assets/Images/img-donnee.jpeg" alt="Image WatchDogs qui va avec les données">
                         </div>
 
+                        <!-- Création puis liaison des données de la BDD vers les infos présentes sur la page -->
                         <?php
                             $responsePartiesJouees = $conn -> query('SELECT COUNT(id) FROM score;');
                             $donneePartieJouees = $responsePartiesJouees -> fetch();
