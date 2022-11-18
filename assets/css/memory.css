@@ -22,7 +22,7 @@ body {
     background-color: rgba(19,15,45,255);
 }
 
-.lesDifficultes {
+.lesDifficultes, .lesThemes {
     height: 70px;
     display: flex;
     justify-content: center;
@@ -37,14 +37,42 @@ body {
     padding-right: 20%;
 }
 
+.lesThemes2 {
+    padding: 10px;
+    background-color: rgb(102, 62, 141);
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: larger;
+}
+
+.lesThemes2:hover {
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.329);
+    color: aqua;
+}
+
+.lesThemes2:active {
+    background-color: rgb(86, 42, 130);
+    box-shadow: none;
+}
+
 .lesDifficultes2 {
     padding: 10px;
     background-color: rgb(102, 62, 141);
     border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: larger;
 }
 
 .lesDifficultes2:hover {
     box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.329);
+    color: aqua;
+}
+
+.lesDifficultes2:active {
+    background-color: rgb(86, 42, 130);
+    box-shadow: none;
 }
 
 .lesTableaux {

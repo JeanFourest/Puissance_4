@@ -35,11 +35,17 @@ include "includes/database.inc.php";
             </div>
             <!--Niveaux de difficulté-->
             <div class="leJeu">
+            <div class="lesThemes">
+                    <input type="button" class="lesThemes2" id="Theme1" value="Jean"/>
+                    <input type="button" class="lesThemes2" id="Theme2" value="Pays"/>
+                    <input type="button" class="lesThemes2" id="Theme3" value="Couleurs"/>
+                </div>
+
                 <div class="lesDifficultes">
-                    <a href="" class="lesDifficultes2">Facile</a>
-                    <a href="" class="lesDifficultes2">Intermédiaire</a>
-                    <a href="" class="lesDifficultes2">Expert</a>
-                    <a href="" class="lesDifficultes2">Impossible</a>
+                    <input type="button" class="lesDifficultes2" id="Facile" value="Facile"/>
+                    <input type="button" class="lesDifficultes2" id="Intermédiaire" value="Intermédiaire"/>
+                    <input type="button" class="lesDifficultes2" id="Expert" value="Expert"/>
+                    <input type="button" class="lesDifficultes2" id="Impossible" value="Impossible"/>
                 </div>
                 <!--Cases du tableau-->
                 <div class="lesTableaux">
