@@ -36,11 +36,16 @@ include "includes/database.inc.php";
             </div>
             <!--Niveaux de difficulté-->
             <div class="leJeu">
+
+                <input type="button" onclick="revealThemes()" id="openThemes" value="themes"/>
+
                 <div class="lesThemes">
                     <input type="button" class="lesThemes2" id="Theme1" value="Jean"/>
                     <input type="button" class="lesThemes2" id="Theme2" value="Pays"/>
                     <input type="button" class="lesThemes2" id="Theme3" value="Couleurs"/>
                 </div>
+
+                <input type="button" id="openDifficultes" value="Difficultes"/>
 
                 <div class="lesDifficultes">
                     <input type="button" class="lesDifficultes2" id="Facile" value="Facile"/>
