@@ -52,20 +52,20 @@ include "includes/database.inc.php";
                         //mes variables qui contiennent mes informations $_POST
                         $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
                         $motDePasse = $_POST["mdp"];
-                        $motDePasseHash = password_hash($motDePasse, PASSWORD_DEFAULT);
                         
                         //verifie si le mot de passe saisie est egale ou superieure a 8 charateres et verifie aussi si le mail saisie est un vrai
                         if(strlen($motDePasse) >= 8 && filter_var($email, FILTER_VALIDATE_EMAIL)){
                             
                             //prepare les commandes pour l'etape suivant
-                            $demande = $conn->prepare("SELECT * FROM utilisateur WHERE email = ? AND password = ?");
+                            $demande = $conn->prepare("SELECT * FROM utilisateur WHERE email = ?");
                             $demande->bindParam(1, $email);
-                            $demande->bindParam(2, $motDePasseHash);
                             $demande->execute();
+                            $utilisateur = $demande->fetch();
+
 
                             //enregistre l'id de l'utilisateur dans $_SESSION
-                            if($row = $demande->fetch()){
-                                $_SESSION["user_id"] = $row["id"];
+                            if($utilisateur && password_verify($motDePasse, $utilisateur['password'])){
+                                $_SESSION["user_id"] = $utilisateur["id"];
                                 
                             } else{
                                 //en cas d'erreur on envoie un message a l'utilisateur
