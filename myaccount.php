@@ -53,7 +53,7 @@ include "includes/database.inc.php";
                         </div>
                         <div class="change_info">
                             <label for="confirm_password"></label>
-                            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirmez le mot de passe" size="100" required class="required_answer">
+                            <input type="password" id="confirm_password" name="confirm_mdp" placeholder="Confirmez le mot de passe" size="100" required class="required_answer">
                         </div>
                         <div class="change_info" class="submit">
                             <input type="submit" value="Changer mon email" name="submit_email" class="submit">
@@ -88,34 +88,23 @@ include "includes/database.inc.php";
                 //la verifications des informations saisie par l'utilisateur
                 if(isset($_POST["submit_email"])){
 
-                    //prepare les commandes pour l'etape suivant
-                    $demande = $conn->prepare("SELECT * FROM utilisateur WHERE email = ? AND password = ?");
-                    $demande->bindParam(1, $email);
-                    $demande->bindParam(2, $motDePasse);
-                    $demande->execute();
+                    //mes variables qui contiennent mes informations $_POST
+                    $old_email = filter_var($_POST["old_email"], FILTER_SANITIZE_EMAIL);
+                    $new_email = filter_var($_POST["new_email"], FILTER_SANITIZE_EMAIL);
+                    $mdp = $_POST["password"];
+                    $verifyMDP = $_POST["confirm_mdp"];
+                    $pass_hash = password_hash($mdp, PASSWORD_DEFAULT);
+                    $mdp_hash = password_hash($verifyMDP, PASSWORD_DEFAULT);
 
-                    $oldEmail = filter_var($_POST["old_email"], FILTER_SANITIZE_EMAIL);
-                    $newEmail = filter_var($_POST["new_email"], FILTER_SANITIZE_EMAIL);
-                    $motDePasse = $_POST["password"];
-                    $verifyMDP = $_POST["confirm_password"];
+                    if(filter_var($old_email, FILTER_VALIDATE_EMAIL)) {
 
-                    if(strlen($motDePasse) >= 8 && filter_var($email, FILTER_VALIDATE_EMAIL)){
+                        if(filter_var($new_email, FILTER_VALIDATE_EMAIL)) {
 
-                        if($motDePasse != $verifyMDP){
-                            echo "Les mots de passe ne sont pas similaires.";
-                        } elseif($oldEmail != $demande->fetch()) {
-                            echo "Mauvais email.";
+                            
+
                         }
 
                     }
-
-                }
-
-                //la verifications des informations saisie par l'utilisateur
-                if(isset($_POST["submit_password"])){
-                    $oldPassword = $_POST["old_password"];
-                    $newPassword =$_POST["new_password"];
-                    $verifyMDP = $_POST["confirm_password"];
                 }
 
             ?>
