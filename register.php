@@ -48,8 +48,10 @@ include "includes/database.inc.php";
                             <input type="text" id="Pseudo" name="pseudonym" placeholder="Pseudo" size="100" required class="required_answer">
                         </div>
                         <div class="inscription">
-                            <label for="password"></label>
-                            <input type="password" id="password" name="password" placeholder="Mot de passe" size="100" required class="required_answer">
+                        <script src="assets/JavaScript/password.js"></script>
+                        <label for="password"></label>
+                        <input type="password" id="password" name="password" placeholder="Mot de passe" size="100" required class="required_answer" onkeyup="return passwordChanged();">
+                        <span id="strength"></span>
                         </div>
                         <div class="inscription">
                             <label for="confirm_password"></label>
