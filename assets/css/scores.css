@@ -32,6 +32,10 @@ th {
     background-color: rgb(87, 48, 119);
 }
 
+td {
+    text-align: center;
+}
+
 tr ,td {
     border: 3px solid rgb(72, 16, 117);
     border-radius: 10px;
