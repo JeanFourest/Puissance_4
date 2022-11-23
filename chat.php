@@ -4,7 +4,6 @@
 include "includes/database.inc.php";
 
 $id_user = $_SESSION['user_id'];
-echo $id_user;
 ?>
 
 <!DOCTYPE html>
@@ -25,84 +24,39 @@ echo $id_user;
             <p>Chat général</p>
         </div>
 
+        <!--L'affichage des messages ainsi que l'écriture et l'envoie des messages-->
+        <div class="main">
+            <table id="tableau">
+
     <?php
-
-    
-    /*
-    $_SESSION["1"];
-    $test = $_SESSION["user_id"];
-
-    if(isset($_GET(["id"]))){
-        echo "Je récupère l'id";
-    }
-    else{
-        echo "Mais où est cette id ?";
-    }
-
         if(isset($_POST['valider'])){
             if(!empty($_POST['message'])){
                 $message = nl2br(htmlspecialchars($_POST['message']));
 
-                $insererMessage = $bdd -> prepare('INSERT INTO message(idGame, idExpediteur, message) VALUES (1, ?, ?)');
-                $insererMessage -> bindParam(1, $row["id"]);
+                $insererMessage = $conn -> prepare('INSERT INTO message(idGame, idExpediteur, message) VALUES (1, ?, ?)');
+                $insererMessage -> bindParam(1, $id_user);
                 $insererMessage -> bindParam(2, $message);
-                $insererMessage -> execute();
+                $insererMessage -> execute(); 
             }
             else{
                 echo "Veuillez écrire un message avant de vouloir l'envoyer !";
             }
         }
 
-        if($row["id"] != $_SESSION["user_id"]){
-            
-        }
-        else{*/
-            ?>
-            <!--L'affichage des messages ainsi que l'écriture et l'envoie des messages
-            <div class="main">
-                <table>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td id="nameUser">Moi</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td class="messageEnvoye">Hello</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td id="date">Aujourd'hui à 19h22</td>
-                    </tr> -->
+        $respons = $conn -> prepare('SELECT * FROM message INNER JOIN utilisateur ON message.idExpediteur = utilisateur.id WHERE utilisateur.id = ?');
+        $respons -> bindParam(1, $id_user);
+        $respons -> execute();
+        $discution = $respons -> fetch();
 
-                    <?php
-        /*}*/
+        $respons2 = $conn -> prepare('SELECT * FROM message INNER JOIN utilisateur ON message.idExpediteur = utilisateur.id WHERE utilisateur.id != ?');
+        $respons2 -> bindParam(1, $id_user);
+        $respons2 -> execute();
+        $discution2 = $respons2 -> fetch();
+
+        $respons3 = $conn -> query('SELECT * FROM message INNER JOIN utilisateur ON message.idExpediteur = utilisateur.id');
+
+        while($discution3 = $respons3 -> fetch()){
     ?>
-       <!-- }
-
-        /*$_SESSION["user_id2"] = 2;
-        $autreID = $_SESSION["user_id2"];
-
-        //$nomExpediteur = $bdd
-
-        if($monID != 1){
-            $nomExpediteur = $bdd -> prepare('SELECT name FROM utilisateur WHERE id = $autreID');
-            $nomExpediteur -> execute();
-            $wtfVariable = "Premier test";
-            echo "<tr> <td></td> <td id = 'nameUser'>" . $autreID . "</td> <td></td> </tr>";
-            echo "<tr> <td><img src='assets/Images/pdpJean.png' alt='Photo de profil utilisateur' class='pdpUser'></td> <td class='messageRecu'>" . $wtfVariable . "</td> <td></td> </tr>";
-            echo "<tr> <td></td> <td></td> <td></td> </tr>";
-        }
-        else{
-            $wtfVariable2 = "Deuxieme test ";
-            echo "<tr><td></td> <td id = 'nameUser'>" . $monID . "</td> <td class='messageRecu'>" . $wtfVariable2 . "</td> </tr>";
-        }*/ -->
-
-        <!--L'affichage des messages ainsi que l'écriture et l'envoie des messages-->
-        <div class="main">
-            <table>
                 <tr>
                     <td></td>
                     <td></td>
@@ -111,43 +65,32 @@ echo $id_user;
                 <tr>
                     <td></td>
                     <td></td>
-                    <td class="messageEnvoye">Hello</td>
+                    <td class="messageEnvoye"><?= $discution['message']; ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
-                    <td id="date">Aujourd'hui à 19h22</td>
+                    <td id="date"><?= $discution['dateMessage']; ?></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td id="nameUser">Arthur</td>
+                    <td id="nameUser"><?= $discution2['name']; ?></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td><img src="assets/Images/pdpHywel.jpeg" alt="Photo de profil utilisateur" class="pdpUser"></td>
-                    <td class="messageRecu" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sapiente cum, ducimus ipsam itaque adipisci animi omnis obcaecati error praesentium in culpa consequatur sed harum inventore vitae incidunt, alias quo!</td>
+                    <td class="messageRecu"><?= $discution2['message']; ?></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td id="date">Aujourd'hui à 19h36</td>
+                    <td id="date"><?= $discution2['dateMessage']; ?></td>
                     <td></td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td id="nameUser">Arthur</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td><img src="assets/Images/pdpJean.png" alt="Photo de profil utilisateur" class="pdpUser"></td>
-                    <td colspan = "" class="messageRecu" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td id="date">Aujourd'hui à 19h38</td>
-                    <td></td>
-                </tr>
+    <?php
+        }
+        $respons3 -> closeCursor();
+    ?>
             </table>
         </div>
 

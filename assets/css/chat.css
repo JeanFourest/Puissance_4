@@ -51,8 +51,12 @@ body{
 
 .main{
     background-color: white;
-    flex: 1;
     padding: 10px 15px;
+    overflow: scroll;
+}
+
+#tableau{
+    width: 100%;
 }
 
 #nameUser{
