@@ -57,14 +57,15 @@ include "includes/database.inc.php";
                         if(strlen($motDePasse) >= 8 && filter_var($email, FILTER_VALIDATE_EMAIL)){
                             
                             //prepare les commandes pour l'etape suivant
-                            $demande = $conn->prepare("SELECT * FROM utilisateur WHERE email = ? AND password = ?");
+                            $demande = $conn->prepare("SELECT * FROM utilisateur WHERE email = ?");
                             $demande->bindParam(1, $email);
-                            $demande->bindParam(2, $motDePasse);
                             $demande->execute();
+                            $utilisateur = $demande->fetch();
+
 
                             //enregistre l'id de l'utilisateur dans $_SESSION
-                            if($row = $demande->fetch()){
-                                $_SESSION["user_id"] = $row["id"];
+                            if($utilisateur && password_verify($motDePasse, $utilisateur['password'])){
+                                $_SESSION["user_id"] = $utilisateur["id"];
                                 
                             } else{
                                 //en cas d'erreur on envoie un message a l'utilisateur
