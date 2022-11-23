@@ -87,9 +87,10 @@ include "includes/database.inc.php";
                             } elseif($motDePasse != $verifyMDP){
                                 echo "Les mots de passe ne sont pas similaires.";
                             } else {
+                                $pass_hash = password_hash($motDePasse, PASSWORD_DEFAULT);
                                 $requeteSql = 'INSERT INTO utilisateur (id, email, password, name, dateSignUp) VALUES (NULL, ?, ?, ?, NOW())';
                                 $requeteInscription = $conn -> prepare($requeteSql);
-                                $requeteInscription -> execute([$email, $motDePasse, $pseudo]);
+                                $requeteInscription -> execute([$email, $pass_hash, $pseudo]);
                                 mail($email, "Bienvenue sur le site !", "null");
                             }
 
