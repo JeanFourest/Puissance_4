@@ -36,26 +36,31 @@ include "includes/database.inc.php";
             </div>
             <!--Niveaux de difficulté-->
             <div class="leJeu">
+                <div id="themeButtonBox">
+                    <input type="button" onclick="revealThemes()" id="openThemes" value="themes"/>
+                </div>
 
-                <input type="button" onclick="revealThemes()" id="openThemes" value="themes"/>
-
-                <div class="lesThemes">
+                <div id="lesThemes">
                     <input type="button" class="lesThemes2" id="Theme1" value="Jean"/>
                     <input type="button" class="lesThemes2" id="Theme2" value="Pays"/>
                     <input type="button" class="lesThemes2" id="Theme3" value="Couleurs"/>
                 </div>
 
-                <input type="button" id="openDifficultes" value="Difficultes"/>
 
-                <div class="lesDifficultes">
-                    <input type="button" class="lesDifficultes2" id="Facile" value="Facile"/>
-                    <input type="button" class="lesDifficultes2" id="Intermédiaire" value="Intermédiaire"/>
-                    <input type="button" class="lesDifficultes2" id="Expert" value="Expert"/>
-                    <input type="button" class="lesDifficultes2" id="Impossible" value="Impossible"/>
+                <div id="diffButtonBox">
+                    <input type="button" onclick="revealDiff()" id="openDifficultes" value="Difficultes"/>
                 </div>
+
+                <div id="lesDifficultes">
+                    <input type="button" onclick="diff1()" class="lesDifficultes2" id="facile" value="Facile"/>
+                    <input type="button" onclick="diff2()" class="lesDifficultes2" id="intermediaire" value="Intermédiaire"/>
+                    <input type="button" onclick="diff3()" class="lesDifficultes2" id="expert" value="Expert"/>
+                    <input type="button" onclick="diff4()" class="lesDifficultes2" id="impossible" value="Impossible"/>
+                </div>
+
                 <!--Cases du tableau-->
                 <div class="lesTableaux">
-                    <table class="tableau1">
+                    <table id="tableau1">
                         <tr>
                             <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
                             <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
@@ -81,7 +86,7 @@ include "includes/database.inc.php";
                             <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
                         </tr>
                     </table>
-                    <table class="tableau2">
+                    <table id="tableau2">
                         <tr>
                             <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
                             <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
@@ -163,7 +168,7 @@ include "includes/database.inc.php";
                             <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
                         </tr>
                     </table>
-                    <table class="tableau3">
+                    <table id="tableau3">
                         <tr>
                             <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
                             <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
@@ -333,7 +338,7 @@ include "includes/database.inc.php";
                             <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
                         </tr>
                     </table>
-                    <table class="tableau4">
+                    <table id="tableau4">
                         <tr>
                             <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
                             <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>

@@ -18,11 +18,11 @@ body {
 }
 
 .leJeu {
-    margin-top: 100px;
+    margin-top: 10px;
     background-color: rgba(19,15,45,255);
 }
 
-.lesDifficultes, .lesThemes {
+#lesDifficultes, #lesThemes {
     height: 70px;
     display: flex;
     justify-content: center;
@@ -35,6 +35,34 @@ body {
     margin-top: 10px;
     padding-left: 20%;
     padding-right: 20%;
+    visibility: hidden;
+}
+#themeButtonBox, #diffButtonBox {
+    display: flex;
+    justify-content: center;
+}
+
+
+#openThemes, #openDifficultes {
+    font-size: larger;
+    border: none;
+    border-radius: 50px;
+    margin: 10px;
+    padding: 15px;
+    background-color: rgb(125, 67, 183);
+    color: white;
+}
+
+#openThemes:hover, #openDifficultes:hover {
+    color: aqua;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.329);
+
+}
+
+#openThemes:active, #openDifficultes:active {
+    background-color: rgb(94, 51, 137);
+    box-shadow: none;
+
 }
 
 .lesThemes2 {
@@ -85,7 +113,7 @@ body {
     padding: 5px;
 }
 
-.tableau1 {
+#tableau1 {
     background-color: rgb(54, 22, 87);
     width: fit-content;
     height: fit-content;
@@ -107,7 +135,8 @@ body {
     justify-content: center;
 }
 
-.tableau2 {
+#tableau2 {
+    display: none;
     background-color: rgb(54, 22, 87);
     width: fit-content;
     height: fit-content;
@@ -129,7 +158,8 @@ body {
     justify-content: center;
 }
 
-.tableau3 {
+#tableau3 {
+    display: none;
     background-color: rgb(54, 22, 87);
     width: fit-content;
     height: fit-content;
@@ -151,7 +181,8 @@ body {
     justify-content: center;
 }
 
-.tableau4 {
+#tableau4 {
+    display: none;
     background-color: rgb(54, 22, 87);
     width: fit-content;
     height: fit-content;
