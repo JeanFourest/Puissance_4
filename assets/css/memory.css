@@ -24,7 +24,7 @@ body {
 
 #lesDifficultes, #lesThemes {
     height: 70px;
-    display: flex;
+    display: none;
     justify-content: center;
     justify-content: space-around;
     align-items: center;
@@ -35,15 +35,15 @@ body {
     margin-top: 10px;
     padding-left: 20%;
     padding-right: 20%;
-    visibility: hidden;
 }
-#themeButtonBox, #diffButtonBox {
+
+#themeButtonBox, #diffButtonBox, #startButtonBox {
     display: flex;
     justify-content: center;
 }
 
 
-#openThemes, #openDifficultes {
+#openThemes, #openDifficultes, #start {
     font-size: larger;
     border: none;
     border-radius: 50px;
@@ -53,13 +53,13 @@ body {
     color: white;
 }
 
-#openThemes:hover, #openDifficultes:hover {
+#openThemes:hover, #openDifficultes:hover, #start:hover {
     color: aqua;
     box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.329);
 
 }
 
-#openThemes:active, #openDifficultes:active {
+#openThemes:active, #openDifficultes:active, #start:active {
     background-color: rgb(94, 51, 137);
     box-shadow: none;
 

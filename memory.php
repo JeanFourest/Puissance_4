@@ -34,28 +34,41 @@ include "includes/database.inc.php";
             <div id="titreMemory">
                 <h2>MEMORY</h2>
             </div>
-            <!--Niveaux de difficulté-->
+            <!--Les themes-->
             <div class="leJeu">
+
+                <!-- Le bouton themes -->
                 <div id="themeButtonBox">
                     <input type="button" onclick="revealThemes()" id="openThemes" value="themes"/>
                 </div>
 
+                <!-- choisir son theme -->
                 <div id="lesThemes">
                     <input type="button" class="lesThemes2" id="Theme1" value="Jean"/>
                     <input type="button" class="lesThemes2" id="Theme2" value="Pays"/>
                     <input type="button" class="lesThemes2" id="Theme3" value="Couleurs"/>
                 </div>
 
-
+                <!-- le bouton difficulte -->
                 <div id="diffButtonBox">
                     <input type="button" onclick="revealDiff()" id="openDifficultes" value="Difficultes"/>
                 </div>
 
+                <!-- choisir sa difficulte -->
                 <div id="lesDifficultes">
                     <input type="button" onclick="diff1()" class="lesDifficultes2" id="facile" value="Facile"/>
                     <input type="button" onclick="diff2()" class="lesDifficultes2" id="intermediaire" value="Intermédiaire"/>
                     <input type="button" onclick="diff3()" class="lesDifficultes2" id="expert" value="Expert"/>
                     <input type="button" onclick="diff4()" class="lesDifficultes2" id="impossible" value="Impossible"/>
+                </div>
+
+                <!-- le bouton start du jeu -->
+                <div id="startButtonBox">
+                    <input type="button" onclick="start()" id="start" value="Start">
+                </div>
+
+                <div id="timer">
+                    
                 </div>
 
                 <!--Cases du tableau-->
