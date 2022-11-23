@@ -17,6 +17,7 @@ include "includes/database.inc.php";
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
             <script src="https://kit.fontawesome.com/306ccec929.js" crossorigin="anonymous"></script>
+            <script src="assets/JavaScript/memory.js"></script>
             <title>Memory</title>
         </head>
         <body>
@@ -35,7 +36,7 @@ include "includes/database.inc.php";
             </div>
             <!--Niveaux de difficulté-->
             <div class="leJeu">
-            <div class="lesThemes">
+                <div class="lesThemes">
                     <input type="button" class="lesThemes2" id="Theme1" value="Jean"/>
                     <input type="button" class="lesThemes2" id="Theme2" value="Pays"/>
                     <input type="button" class="lesThemes2" id="Theme3" value="Couleurs"/>
