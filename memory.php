@@ -777,12 +777,14 @@ include "includes/database.inc.php";
             <!-- Fin Importation du footer -->
 
             <!-- Bouton du Chat -->
-            
+            <div id="chatBody">
+                <?php
+                    include "chat.php";
+                ?>
+            </div>
             <div id="boutonChat">
-                <a href="chat.php"><i class="fa-solid fa-message"></i></a>
+                <i class="fa-solid fa-message"></i>
             </div>
-            <div>
-                
-            </div>
+        <script></script>
         </body>
     </html>

@@ -1,8 +1,6 @@
 <!-- Lien vers le BDD du fichier database.inc.php -->
 
 <?php
-include "includes/database.inc.php";
-
 $id_user = $_SESSION['user_id'];
 ?>
 
@@ -12,10 +10,10 @@ $id_user = $_SESSION['user_id'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat</title>
     <link rel="stylesheet" href="assets/css/chat.css">
+    <title>Chat</title>
 </head>
-<body>
+<div id="body">
     <!--Fenêtre de Chat-->
     <div class="fenêtreChat">
         <!--Le header de la fenêtre du Chat-->
@@ -89,16 +87,14 @@ $id_user = $_SESSION['user_id'];
             ?>
             </table>
         </div>
-
         <!-- Le footer de la fenêtre de Chat-->
-        <div class="footer">
+        <div class="footerChat">
             <form method="POST">
                 <textarea type="text" name="message" placeholder="Votre message..." id="message"></textarea>
                 <button type="submit" name="valider">Envoyer</button>
             </form>
-
             <section id="messages"></section>
         </div>
     </div>
-</body>
+</div>
 </html>
