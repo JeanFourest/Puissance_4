@@ -101,17 +101,17 @@ include "includes/database.inc.php";
                             $responseTempsRecord = $conn -> query('SELECT MIN(gameScore) FROM score;');
                             $donneeTempsRecord = $responseTempsRecord -> fetch();
 
-                            $responseJoueursInscrits = $conn -> query('SELECT COUNT(idPlayer) FROM score;');
+                            $responseJoueursInscrits = $conn -> query('SELECT COUNT(id) FROM utilisateur;');
                             $donneeJoueursInscrits = $responseJoueursInscrits -> fetch();
                         ?>
                         <div class="allDonnees">
                             <div class="Box1">
                                 <div class="Bloc1">
-                                    <p id="textBox"><?php echo $donneePartieJouees['COUNT(id)'];?></p>
+                                    <p id="textBox"><?= $donneePartieJouees['COUNT(id)'];?></p>
                                     <p>Parties Jouées</p>
                                 </div>
                                 <div class="Bloc2">
-                                    <p id="textBox"><?php echo $donneeTempsRecord['MIN(gameScore)'];?> sec</p>
+                                    <p id="textBox"><?= $donneeTempsRecord['MIN(gameScore)'];?> sec</p>
                                     <p>Temps Record</p>
                                 </div>
                             </div>
@@ -121,7 +121,7 @@ include "includes/database.inc.php";
                                     <p>Joueurs Connectés</p>
                                 </div>
                                 <div class="Bloc4">
-                                    <p id="textBox"><?php echo $donneeJoueursInscrits['COUNT(idPlayer)'];?></p>
+                                    <p id="textBox"><?= $donneeJoueursInscrits['COUNT(id)'];?></p>
                                     <p>Joueurs Inscrits</p>
                                 </div>
                             </div>

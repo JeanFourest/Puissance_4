@@ -150,10 +150,25 @@ body {
     justify-content: flex-end;
     position: fixed;
     bottom:1%;
-    right:1%;
+    right:0%;
     z-index:9999;
     padding: 20px;
     background-color: orange;
     border-radius: 100px;
     font-size: 20px;
+}
+
+#boutonChat:hover{
+    color: aqua;
+}
+
+#chatBody{
+    display: none;
+    justify-content: flex-end;
+    position: fixed;
+    bottom:6%;
+    right:-0.5%;
+    z-index:9999;
+    padding: 20px;
+
 }

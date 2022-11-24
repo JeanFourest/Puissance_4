@@ -17,6 +17,7 @@ include "includes/database.inc.php";
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
             <script src="https://kit.fontawesome.com/306ccec929.js" crossorigin="anonymous"></script>
+            <script src="assets/JavaScript/chat.js"></script>
             <title>Memory</title>
         </head>
         <body>
@@ -777,9 +778,13 @@ include "includes/database.inc.php";
             <!-- Fin Importation du footer -->
 
             <!-- Bouton du Chat -->
-            
-            <div id="boutonChat">
-                <a href="chat.php"><i class="fa-solid fa-message"></i></a>
+            <div id="chatBody">
+                <?php
+                    include "chat.php";
+                ?>
+            </div>
+            <div id="boutonChat" onclick="showChat()">
+                <i class="fa-solid fa-message"></i>
             </div>
         </body>
     </html>
