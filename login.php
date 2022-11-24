@@ -45,6 +45,10 @@ include "includes/database.inc.php";
                     </div>
                 </form>
                 
+                <form action="register.php">
+                    <input type="submit" value="Register" id="register"/>
+                </form>
+                
                 <?php
                     //la verifications des informations saisie par l'utilisateur
                     if(isset($_POST["submit"])){
