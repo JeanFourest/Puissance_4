@@ -67,8 +67,8 @@ include "includes/database.inc.php";
                     <input type="button" onclick="start()" id="start" value="Start">
                 </div>
 
-                <div id="timer">
-                    
+                <div id="timerBox">
+                    <p id="timer">00 : 00 : 00 : 000</p>
                 </div>
 
                 <!--Cases du tableau-->

@@ -66,5 +66,7 @@ function start(){
     document.getElementById("lesThemes").style.display = "none";
     document.getElementById("lesDifficultes").style.display = "none";
 
-    
+    let [milliseconds, seconds, minutes, hours] = [0,0,0,0];
+    let timeRef = document.querySelector("#timer");
+    let int = null;
 }
