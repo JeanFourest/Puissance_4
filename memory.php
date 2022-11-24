@@ -83,8 +83,6 @@ include "includes/database.inc.php";
                             */
 
                             $cardId = 0;
-                            $cardImg = 0;
-
 
 
 
