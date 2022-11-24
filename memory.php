@@ -165,7 +165,7 @@ include "includes/database.inc.php";
                         /* <tr>
                             <td class="td4"><div class="box4"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
                         </tr> */
-                        $cardId = 0;
+                        $cardId = 0; 
 
                         
                         for($cols4 = 0; $cols4 < 20; $cols4++) {
