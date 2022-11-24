@@ -112,7 +112,10 @@ function start(){
     if(window.getComputedStyle(t1).display === "flex") {
         console.log("difficulty easy started");
 
-        const idCard = [];
+        let idCard = [];
+
+
+        
 
         
 
