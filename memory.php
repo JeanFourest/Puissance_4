@@ -781,5 +781,8 @@ include "includes/database.inc.php";
             <div id="boutonChat">
                 <a href="chat.php"><i class="fa-solid fa-message"></i></a>
             </div>
+            <div>
+                
+            </div>
         </body>
     </html>
