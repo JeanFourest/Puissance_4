@@ -84,13 +84,11 @@ include "includes/database.inc.php";
 
                             $cardId = 0;
 
-
-
                             for($cols1 = 0; $cols1 < 4; $cols1++) {
 
                                 echo "<tr>";
                                     for($rows1 = 0; $rows1 < 4; $rows1++) {
-                                        echo '<td class="td1"><div class="box1" id="'.$cardId++.'"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>';
+                                        echo '<td class="td1" id="'.$cardId++.'"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>';
                                     }
                                 echo "</tr>";
                             }

@@ -112,14 +112,37 @@ function start(){
     if(window.getComputedStyle(t1).display === "flex") {
         console.log("difficulty easy started");
 
-        let idCard = [];
 
+        let cardImg = ["test1", "test2", "test3", "test4", "test5", "test6", "test7", "test8"];
+        let CCC2 = 0;
+        let CCC = 0;
 
-        
+        for(CCC = 0; CCC < cardImg.length; CCC++) {
+            console.log(cardImg[CCC]);
 
-        
+            for(CCC2 = 0; CCC2 < cardImg.length; CCC2++) {
+                console.log(cardImg[CCC]);
+            }
 
+        }
 
-        
+        const test = document.getElementById("1");
+
+        test.addEventListener("click", function(){
+            console.log("1");
+        });
+
+        function game() {
+
+            idCard.unshift();
+            const idCard = [];
+            let cardsTurned = [];
+        }
     }
 }
+
+const test = document.getElementById("1");
+
+test.addEventListener("click", function(){
+    console.log("1");
+});
