@@ -103,6 +103,10 @@ body {
     box-shadow: none;
 }
 
+#chrono {
+    font-size: 200%;
+}
+
 .lesTableaux {
     margin-top: 100px;
     display: flex;

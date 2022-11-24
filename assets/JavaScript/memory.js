@@ -66,7 +66,37 @@ function start(){
     document.getElementById("lesThemes").style.display = "none";
     document.getElementById("lesDifficultes").style.display = "none";
 
-    let [milliseconds, seconds, minutes, hours] = [0,0,0,0];
-    let timeRef = document.querySelector("#timer");
-    let int = null;
+
+    let mseconds = 0;
+    let seconds = 0;
+    let minutes = 0;
+    let hours = 0;
+
+    setInterval(setmseconds, 10)
+
+    function setmseconds() {
+
+        if(mseconds < 99) {
+        mseconds = mseconds + 1;
+        document.getElementById("mseconds").innerHTML = mseconds;
+        }
+
+        if(mseconds >= 99) {
+            mseconds = 0;
+            seconds = seconds + 1;
+            document.getElementById("seconds").innerHTML = seconds;
+        }
+
+        if(seconds >= 59) {
+            seconds = 0;
+            minutes = minutes + 1;
+            document.getElementById("minutes").innerHTML = minutes;
+        }
+
+        if(minutes >= 59) {
+            minutes = 0;
+            hours = hours + 1;
+            document.getElementById("hours").innerHTML = hours;
+        }
+    }   
 }
