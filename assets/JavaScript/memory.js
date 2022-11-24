@@ -27,6 +27,7 @@ function revealDiff(){
 }
 
 
+
 function diff1(){
 
     document.getElementById("tableau1").style.display = "flex";
@@ -99,4 +100,23 @@ function start(){
             document.getElementById("hours").innerHTML = hours;
         }
     }   
+
+
+    let t1 = document.getElementById("tableau1");
+    let t2 = document.getElementById("tableau2");
+    let t3 = document.getElementById("tableau3");
+    let t4 = document.getElementById("tableau4");
+
+
+
+    if(window.getComputedStyle(t1).display === "flex") {
+        console.log("difficulty easy started");
+
+        const idCard = [];
+
+        
+
+
+        
+    }
 }

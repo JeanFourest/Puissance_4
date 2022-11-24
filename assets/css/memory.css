@@ -118,6 +118,7 @@ body {
 }
 
 #tableau1 {
+    display: flex;
     background-color: rgb(54, 22, 87);
     width: fit-content;
     height: fit-content;
