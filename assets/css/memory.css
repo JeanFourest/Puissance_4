@@ -163,7 +163,7 @@ body {
 }
 
 #chatBody{
-    display: flex;
+    display: none;
     justify-content: flex-end;
     position: fixed;
     bottom:6%;
