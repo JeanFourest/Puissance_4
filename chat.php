@@ -25,6 +25,7 @@ $id_user = $_SESSION['user_id'];
     <div class="main">
         <table id="tableau">
 
+    <!-- Partie php qui permet de récupérer le message que l'utilisateur à écrit puis envoyé -->
     <?php
         if(isset($_POST['valider'])){
             if(!empty($_POST['message'])){
@@ -40,9 +41,13 @@ $id_user = $_SESSION['user_id'];
             }
         }
 
+
+        // Boucle permettant d'afficher tous les messages des différents utilisateurs en les différenciant entre bleu et gris
         $respons3 = $conn -> query('SELECT * FROM message INNER JOIN utilisateur ON message.idExpediteur = utilisateur.id ORDER BY message.dateMessage');
 
         while($discution3 = $respons3 -> fetch()){
+
+            // Condition permettant de vérifier si le message à été écrit par nous, ou par quelqu'un d'autre 
             if ($discution3['idExpediteur'] == $id_user) {
             ?>
                 <tr>
@@ -79,6 +84,8 @@ $id_user = $_SESSION['user_id'];
                     <td id="date" colspan="2"><?= $discution3['dateMessage']; ?></td>
                     <td></td>
                 </tr>
+
+        <!-- Partie php permettant de stopper la boucle while une fois que tous les messages sont affichés -->
         <?php
             }
         }
@@ -86,6 +93,7 @@ $id_user = $_SESSION['user_id'];
         ?>
         </table>
     </div>
+
     <!-- Le footer de la fenêtre de Chat-->
     <div class="footerChat">
         <form method="POST">
