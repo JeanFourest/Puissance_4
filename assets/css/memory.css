@@ -18,13 +18,13 @@ body {
 }
 
 .leJeu {
-    margin-top: 100px;
+    margin-top: 10px;
     background-color: rgba(19,15,45,255);
 }
 
-.lesDifficultes {
+#lesDifficultes, #lesThemes {
     height: 70px;
-    display: flex;
+    display: none;
     justify-content: center;
     justify-content: space-around;
     align-items: center;
@@ -37,14 +37,74 @@ body {
     padding-right: 20%;
 }
 
+#themeButtonBox, #diffButtonBox, #startButtonBox {
+    display: flex;
+    justify-content: center;
+}
+
+
+#openThemes, #openDifficultes, #start {
+    font-size: larger;
+    border: none;
+    border-radius: 50px;
+    margin: 10px;
+    padding: 15px;
+    background-color: rgb(125, 67, 183);
+    color: white;
+}
+
+#openThemes:hover, #openDifficultes:hover, #start:hover {
+    color: aqua;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.329);
+
+}
+
+#openThemes:active, #openDifficultes:active, #start:active {
+    background-color: rgb(94, 51, 137);
+    box-shadow: none;
+
+}
+
+.lesThemes2 {
+    padding: 10px;
+    background-color: rgb(102, 62, 141);
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: larger;
+}
+
+.lesThemes2:hover {
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.329);
+    color: aqua;
+}
+
+.lesThemes2:active {
+    background-color: rgb(86, 42, 130);
+    box-shadow: none;
+}
+
 .lesDifficultes2 {
     padding: 10px;
     background-color: rgb(102, 62, 141);
     border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: larger;
 }
 
 .lesDifficultes2:hover {
     box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.329);
+    color: aqua;
+}
+
+.lesDifficultes2:active {
+    background-color: rgb(86, 42, 130);
+    box-shadow: none;
+}
+
+#chrono {
+    font-size: 200%;
 }
 
 .lesTableaux {
@@ -57,7 +117,8 @@ body {
     padding: 5px;
 }
 
-.tableau1 {
+#tableau1 {
+    display: flex;
     background-color: rgb(54, 22, 87);
     width: fit-content;
     height: fit-content;
@@ -79,7 +140,8 @@ body {
     justify-content: center;
 }
 
-.tableau2 {
+#tableau2 {
+    display: none;
     background-color: rgb(54, 22, 87);
     width: fit-content;
     height: fit-content;
@@ -101,7 +163,8 @@ body {
     justify-content: center;
 }
 
-.tableau3 {
+#tableau3 {
+    display: none;
     background-color: rgb(54, 22, 87);
     width: fit-content;
     height: fit-content;
@@ -123,7 +186,8 @@ body {
     justify-content: center;
 }
 
-.tableau4 {
+#tableau4 {
+    display: none;
     background-color: rgb(54, 22, 87);
     width: fit-content;
     height: fit-content;

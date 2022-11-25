@@ -45,6 +45,10 @@ include "includes/database.inc.php";
                     </div>
                 </form>
                 
+                <form action="register.php">
+                    <input type="submit" value="Register" id="register"/>
+                </form>
+                
                 <?php
                     //la verifications des informations saisie par l'utilisateur
                     if(isset($_POST["submit"])){
@@ -63,9 +67,10 @@ include "includes/database.inc.php";
                             $utilisateur = $demande->fetch();
 
 
-                            //enregistre l'id de l'utilisateur dans $_SESSION
+                            //enregistre l'id de l'utilisateur dans $_SESSION et envoie l'utilisateur dans le menu
                             if($utilisateur && password_verify($motDePasse, $utilisateur['password'])){
                                 $_SESSION["user_id"] = $utilisateur["id"];
+                                header("Location: index.php");
                                 
                             } else{
                                 //en cas d'erreur on envoie un message a l'utilisateur
