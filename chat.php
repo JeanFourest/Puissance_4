@@ -43,7 +43,7 @@ $id_user = $_SESSION['user_id'];
 
 
         // Boucle permettant d'afficher tous les messages des différents utilisateurs en les différenciant entre bleu et gris
-        $respons3 = $conn -> query('SELECT * FROM message INNER JOIN utilisateur ON message.idExpediteur = utilisateur.id ORDER BY message.dateMessage');
+        $respons3 = $conn -> query('SELECT * FROM message INNER JOIN utilisateur ON message.idExpediteur = utilisateur.id WHERE message.dateMessage >= NOW() - INTERVAL 1 DAY ORDER BY message.dateMessage');
 
         while($discution3 = $respons3 -> fetch()){
 
