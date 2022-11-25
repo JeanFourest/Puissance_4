@@ -39,9 +39,33 @@ body {
     border: none;
     border-radius: 2px;
     padding: 15px 15px 15px 15px;
-    margin: 0 643px 0 0;
+    margin: 0 613px 0 0;
+}
+
+.submit:hover {
+    background-color: darkorange;
 }
 
 .space_out_section {
     padding: 100px 0 20px 0;
+}
+
+#containLogin {
+    display: flex;
+    justify-content: center;
+}
+
+#login {
+    border: none;
+    background-color: orange;
+    color: white;
+    width: 100px;
+    height: 50px;
+    border-radius: 2px;
+    margin: 10px;
+    margin-right: 613px;
+}
+
+#login:hover {
+    background-color: darkorange;
 }
