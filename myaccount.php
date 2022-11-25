@@ -2,6 +2,10 @@
 
 <?php
 include "includes/database.inc.php";
+
+if (!$_SESSION["user_id"]){
+    header("Location: login.php");
+}
 ?>
 
 <!DOCTYPE html>
