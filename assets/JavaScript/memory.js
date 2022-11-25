@@ -126,23 +126,20 @@ function start(){
 
         }
 
-        const test = document.getElementById("1");
+        const tests = document.getElementsByClassName("box1");
 
-        test.addEventListener("click", function(){
-            console.log("1");
-        });
+
+        for(let test of tests) {
+
+            test.addEventListener("click", game);
+        }
 
         function game() {
-
-            idCard.unshift();
             const idCard = [];
             let cardsTurned = [];
+
+            console.log();
+            
         }
     }
 }
-
-const test = document.getElementById("1");
-
-test.addEventListener("click", function(){
-    console.log("1");
-});

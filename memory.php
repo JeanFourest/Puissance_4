@@ -17,7 +17,6 @@ include "includes/database.inc.php";
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
             <script src="https://kit.fontawesome.com/306ccec929.js" crossorigin="anonymous"></script>
-            <script src="assets/JavaScript/memory.js"></script>
             <title>Memory</title>
         </head>
         <body>
@@ -88,7 +87,7 @@ include "includes/database.inc.php";
 
                                 echo "<tr>";
                                     for($rows1 = 0; $rows1 < 4; $rows1++) {
-                                        echo '<td class="td1" id="'.$cardId++.'"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>';
+                                        echo '<td class="td1"><div class="box1" id="'."a-".$cardId++.'"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>';
                                     }
                                 echo "</tr>";
                             }
@@ -178,6 +177,9 @@ include "includes/database.inc.php";
                     </table>
                 </div>
             </div>
+
+            <script src="assets/JavaScript/memory.js"></script>
+
 
             <!-- Importation du footer -->
 
