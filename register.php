@@ -61,6 +61,10 @@ include "includes/database.inc.php";
                             <input type="submit" value="Inscription" name="submit" class="submit">
                         </div>
                     </form>
+
+                    <form action="login.php" id="containLogin">
+                        <input type="submit" value="Connexion" id="login"/>
+                    </form>
                 </section>
             </div>
 

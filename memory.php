@@ -41,7 +41,7 @@ if (!$_SESSION["user_id"]){
             <!--Les themes-->
             <div class="leJeu">
 
-                <!-- Le bouton themes -->
+                <!-- Le bouton pour ouvrir les themes -->
                 <div id="themeButtonBox">
                     <input type="button" onclick="revealThemes()" id="openThemes" value="themes"/>
                 </div>
@@ -53,7 +53,7 @@ if (!$_SESSION["user_id"]){
                     <input type="button" class="lesThemes2" id="Theme3" value="Couleurs"/>
                 </div>
 
-                <!-- le bouton difficulte -->
+                <!-- le bouton pour ouvrir les difficultes -->
                 <div id="diffButtonBox">
                     <input type="button" onclick="revealDiff()" id="openDifficultes" value="Difficultes"/>
                 </div>
@@ -75,16 +75,9 @@ if (!$_SESSION["user_id"]){
 
                 <!--Cases du tableau-->
                 <div class="lesTableaux">
+                    <!-- generation des tableaux -->
                     <table id="tableau1">
                         <?php
-                            /*
-                            <tr>
-                                <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            </tr>
-                            */
 
                             $cardId = 0;
 
@@ -102,18 +95,7 @@ if (!$_SESSION["user_id"]){
                     </table>
                     <table id="tableau2">
                         <?php
-                            /*
-                            <tr>
-                                <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            </tr>
-                            */
+                           
                             $cardId = 0;
 
 
@@ -129,22 +111,7 @@ if (!$_SESSION["user_id"]){
                     </table>
                     <table id="tableau3">
                         <?php
-                            /*
-                            <tr>
-                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            </tr>
-                            */
+                            
                             $cardId = 0;
 
 
@@ -161,10 +128,7 @@ if (!$_SESSION["user_id"]){
                     </table>
                     <table id="tableau4">
                         <?php
-                        
-                        /* <tr>
-                            <td class="td4"><div class="box4"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr> */
+
                         $cardId = 0; 
 
                         
@@ -178,7 +142,6 @@ if (!$_SESSION["user_id"]){
                         }
 
                         ?>
-                        
                     </table>
                 </div>
             </div>
