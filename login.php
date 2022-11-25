@@ -46,7 +46,7 @@ include "includes/database.inc.php";
                 </form>
                 
                 <form action="register.php">
-                    <input type="submit" value="Register" id="register"/>
+                    <input type="submit" value="Inscription" id="register"/>
                 </form>
                 
                 <?php
