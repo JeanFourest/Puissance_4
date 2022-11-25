@@ -131,14 +131,16 @@ function start(){
 
         for(let test of tests) {
 
-            test.addEventListener("click", game);
+            test.addEventListener("click", ()=> game(test));
         }
 
-        function game() {
-            const idCard = [];
-            let cardsTurned = [];
+        const idCard = [];
+        let cardsTurned = [];
 
-            console.log();
+        function game(carte) {
+            
+            
+            console.log(carte);
             
         }
     }
