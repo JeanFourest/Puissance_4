@@ -1,3 +1,5 @@
+// Fonction permettant d'ouvrir et de fermer le chat
+
 function showChat(){
 
 let y = document.getElementById("chatBody");
