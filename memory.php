@@ -38,738 +38,153 @@ if (!$_SESSION["user_id"]){
             <div id="titreMemory">
                 <h2>MEMORY</h2>
             </div>
-            <!--Niveaux de difficulté-->
+            <!--Les themes-->
             <div class="leJeu">
-                <div class="lesDifficultes">
-                    <a href="" class="lesDifficultes2">Facile</a>
-                    <a href="" class="lesDifficultes2">Intermédiaire</a>
-                    <a href="" class="lesDifficultes2">Expert</a>
-                    <a href="" class="lesDifficultes2">Impossible</a>
+
+                <!-- Le bouton themes -->
+                <div id="themeButtonBox">
+                    <input type="button" onclick="revealThemes()" id="openThemes" value="themes"/>
                 </div>
+
+                <!-- choisir son theme -->
+                <div id="lesThemes">
+                    <input type="button" class="lesThemes2" id="Theme1" value="Jean"/>
+                    <input type="button" class="lesThemes2" id="Theme2" value="Pays"/>
+                    <input type="button" class="lesThemes2" id="Theme3" value="Couleurs"/>
+                </div>
+
+                <!-- le bouton difficulte -->
+                <div id="diffButtonBox">
+                    <input type="button" onclick="revealDiff()" id="openDifficultes" value="Difficultes"/>
+                </div>
+
+                <!-- choisir sa difficulte -->
+                <div id="lesDifficultes">
+                    <input type="button" onclick="diff1()" class="lesDifficultes2" id="facile" value="Facile"/>
+                    <input type="button" onclick="diff2()" class="lesDifficultes2" id="intermediaire" value="Intermédiaire"/>
+                    <input type="button" onclick="diff3()" class="lesDifficultes2" id="expert" value="Expert"/>
+                    <input type="button" onclick="diff4()" class="lesDifficultes2" id="impossible" value="Impossible"/>
+                </div>
+
+                <!-- le bouton start du jeu -->
+                <div id="startButtonBox">
+                    <input type="button" onclick="start()" id="start" value="Start">
+                </div>
+
+                <p id="chrono" align = "center"><span id="hours">00</span> : <span id="minutes">00</span> : <span id="seconds">00</span> : <span id="mseconds">000</span></p>
+
                 <!--Cases du tableau-->
                 <div class="lesTableaux">
-                    <table class="tableau1">
-                        <tr>
-                            <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
+                    <table id="tableau1">
+                        <?php
+                            /*
+                            <tr>
+                                <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td1"><div class="box1"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                            </tr>
+                            */
+
+                            $cardId = 0;
+
+                            for($cols1 = 0; $cols1 < 4; $cols1++) {
+
+                                echo "<tr>";
+                                    for($rows1 = 0; $rows1 < 4; $rows1++) {
+                                        echo '<td class="td1"><div class="box1" id="'."a-".$cardId++.'"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>';
+                                    }
+                                echo "</tr>";
+                            }
+
+                        ?>
+                        
                     </table>
-                    <table class="tableau2">
-                        <tr>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
+                    <table id="tableau2">
+                        <?php
+                            /*
+                            <tr>
+                                <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td2"><div class="box2"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                            </tr>
+                            */
+                            $cardId = 0;
+
+
+                            for($cols2 = 0; $cols2 < 8; $cols2++) {
+                                echo "<tr>";
+                                    for($rows2 = 0; $rows2 < 8; $rows2++) {
+                                        echo '<td class="td2"><div class="box2" id="'.$cardId++.'"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>';
+                                    }
+                                echo "</tr>";
+                            }
+
+                        ?>
                     </table>
-                    <table class="tableau3">
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
-                        </tr>
+                    <table id="tableau3">
+                        <?php
+                            /*
+                            <tr>
+                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                                <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>
+                            </tr>
+                            */
+                            $cardId = 0;
+
+
+                            for($cols3 = 0; $cols3 < 12; $cols3++) {
+                                echo "<tr>";
+                                    for($rows3 = 0; $rows3 < 12; $rows3++) {
+                                        echo '<td class="td3"><div class="box3" id="'.$cardId++.'"><i class="fa-regular fa-circle-question fa-2xl"></i></div></td>';
+                                    }
+                                echo "</tr>";
+                            }
+
+                        ?>
+                        
                     </table>
-                    <table class="tableau4">
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
-                        <tr>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                            <td class="td3"><div class="box3"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
-                        </tr>
+                    <table id="tableau4">
+                        <?php
+                        
+                        /* <tr>
+                            <td class="td4"><div class="box4"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>
+                        </tr> */
+                        $cardId = 0; 
+
+                        
+                        for($cols4 = 0; $cols4 < 20; $cols4++) {
+
+                            echo "<tr>";
+                                for($rows4 = 0; $rows4 < 20; $rows4++) {
+                                    echo '<td class="td4"><div class="box4" id="'.$cardId++.'"><i class="fa-regular fa-circle-question fa-xl"></i></div></td>';
+                                }
+                            echo "</tr>";
+                        }
+
+                        ?>
+                        
                     </table>
                 </div>
             </div>
+
+            <script src="assets/JavaScript/memory.js"></script>
+
 
             <!-- Importation du footer -->
 
